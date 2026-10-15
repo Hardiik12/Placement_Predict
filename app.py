@@ -8,8 +8,11 @@ import os
 import sys
 from flask import Flask, jsonify, redirect, render_template, request, url_for
 
-# Ensure project root is on path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MPL_DIR = os.path.join(BASE_DIR, ".cache", "matplotlib")
+os.makedirs(MPL_DIR, exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", MPL_DIR)
+
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
@@ -227,6 +230,192 @@ def train_model():
 def api_data_summary():
     raw_df = load_data(DATA_PATH)
     return jsonify(get_data_summary(raw_df))
+
+
+# =============================================================================
+# CO1-CO6 & M1-M6 WORKBENCH, CLEANING & INSIGHTS ENDPOINTS (RideRush Port)
+# =============================================================================
+
+@app.route("/cleaning")
+def cleaning_page():
+    """
+    Data Quality & Cleaning Page:
+    Missing values, outlier treatment benchmarks, and retention statistics.
+    """
+    try:
+        from placement_pipeline import load_pipeline_summary
+        summary = load_pipeline_summary()
+        return render_template("cleaning.html", summary=summary)
+    except Exception as e:
+        return render_template("cleaning.html", summary={}, error=str(e))
+
+
+@app.route("/insights")
+def insights_page():
+    """
+    Analytical Insights Page:
+    Calculated empirical metrics and placement takeaways.
+    """
+    try:
+        from placement_pipeline import load_pipeline_summary
+        summary = load_pipeline_summary()
+        return render_template("insights.html", summary=summary)
+    except Exception as e:
+        return render_template("insights.html", summary={}, error=str(e))
+
+
+@app.route("/workbench", methods=["GET", "POST"])
+def workbench_page():
+    """
+    Master ML Engineering & Model Workbench Page covering M1-M6 syllabus:
+    Lifecycle, Regression Workbench, Classification, Tree Ensembles,
+    Unsupervised Learning, Evaluation & Calibration, and ML Engineering.
+    """
+    from placement_pipeline import load_pipeline_summary
+    from ml.regression_workbench import predict_workbench_salary_by_model
+    from ml.m6_engineering import record_prediction_telemetry
+
+    try:
+        summary = load_pipeline_summary()
+    except Exception as e:
+        summary = {"error": str(e)}
+
+    active_tab = request.args.get("tab", "regression")
+    prediction_result = None
+    form_values = {"CGPA": 8.2, "CodingTestScore": 82.5, "Internships": 2, "model_key": "polynomial"}
+
+    if request.method == "POST":
+        form_values = {
+            "CGPA": float(request.form.get("CGPA", 8.2)),
+            "CodingTestScore": float(request.form.get("CodingTestScore", 80.0)),
+            "Internships": int(request.form.get("Internships", 1)),
+            "model_key": request.form.get("model_key", "polynomial")
+        }
+        try:
+            prediction_result = predict_workbench_salary_by_model(
+                cgpa_val=form_values["CGPA"],
+                coding_val=form_values["CodingTestScore"],
+                internships_val=form_values["Internships"],
+                model_key=form_values["model_key"]
+            )
+            record_prediction_telemetry(prediction_result["latency_ms"], form_values["model_key"])
+        except Exception as e:
+            prediction_result = {"error": str(e)}
+
+    return render_template(
+        "workbench.html",
+        summary=summary,
+        active_tab=active_tab,
+        form_values=form_values,
+        prediction_result=prediction_result
+    )
+
+
+@app.route("/api/workbench")
+def api_workbench():
+    """
+    API endpoint returning regression workbench benchmarking data and metrics.
+    """
+    try:
+        from placement_pipeline import load_pipeline_summary
+        summary = load_pipeline_summary()
+        return jsonify(summary.get("workbench", {}))
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/workbench/summary")
+def api_workbench_summary():
+    """
+    Comprehensive JSON API endpoint returning all M1-M6 model metrics and schemas.
+    """
+    try:
+        from placement_pipeline import load_pipeline_summary
+        summary = load_pipeline_summary()
+        return jsonify(summary)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/workbench/predict", methods=["GET", "POST"])
+def api_workbench_predict():
+    """
+    JSON API endpoint for multi-model salary prediction with schema validation.
+    Usage: GET /api/workbench/predict?cgpa=8.5&coding=80&internships=2&model=ridge
+    """
+    try:
+        from ml.regression_workbench import predict_workbench_salary_by_model
+        from ml.m6_engineering import record_prediction_telemetry
+
+        if request.method == "POST" and request.is_json:
+            data = request.get_json()
+        else:
+            data = request.args.to_dict() or (request.form.to_dict() if request.method == "POST" else {})
+
+        cgpa = data.get("CGPA", data.get("cgpa", 8.0))
+        coding = data.get("CodingTestScore", data.get("coding", 75.0))
+        internships = data.get("Internships", data.get("internships", 1))
+        model_key = data.get("model", data.get("model_key", "polynomial"))
+
+        result = predict_workbench_salary_by_model(
+            cgpa_val=cgpa,
+            coding_val=coding,
+            internships_val=internships,
+            model_key=model_key
+        )
+        record_prediction_telemetry(result["latency_ms"], model_key)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route("/api/workbench/batch-predict", methods=["POST"])
+def api_workbench_batch_predict():
+    """
+    Batch prediction endpoint supporting JSON tabular records or raw CSV text.
+    Max 1,000 records per request.
+    """
+    try:
+        import pandas as pd
+        from ml.m1_lifecycle import execute_batch_prediction
+
+        model_key = request.args.get("model", "polynomial")
+        if request.is_json:
+            records = request.json.get("records", [])
+            df_batch = pd.DataFrame(records)
+            result = execute_batch_prediction(df_batch, model_key=model_key)
+        else:
+            csv_text = request.data.decode("utf-8")
+            result = execute_batch_prediction(csv_text, model_key=model_key)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route("/api/workbench/drift")
+def api_workbench_drift():
+    """
+    Returns feature distribution drift audit and Kolmogorov-Smirnov test.
+    """
+    try:
+        from placement_pipeline import load_pipeline_summary
+        summary = load_pipeline_summary()
+        drift = summary.get("m6_engineering", {}).get("feature_drift_analysis", {})
+        return jsonify(drift)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/workbench/telemetry")
+def api_workbench_telemetry():
+    """
+    Returns production serving telemetry (request counts, latency percentiles).
+    """
+    try:
+        from ml.m6_engineering import get_monitoring_telemetry
+        return jsonify(get_monitoring_telemetry())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == "__main__":

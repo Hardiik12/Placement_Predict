@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Placement Prediction{% endblock %} - Student Placement Dashboard</title>
+    <title>{% block title %}Student Placement Prediction{% endblock %} — ML Dashboard &amp; Workbench</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header class="navbar">
-        <div class="nav-brand">🎓 Placement Predictor</div>
+        <div class="nav-brand">
+            <a href="{{ url_for('index') }}" style="color: inherit; text-decoration: none;">🎓 Placement Predictor</a>
+        </div>
         <ul class="nav-links">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('data_loading') }}">Data Loading</a></li>
-            <li><a href="{{ url_for('eda') }}">EDA</a></li>
-            <li><a href="{{ url_for('feature_engg') }}">Feature Engg</a></li>
-            <li><a href="{{ url_for('train_model') }}">Model Training</a></li>
-            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">🏠 Dashboard</a></li>
+            <li><a href="{{ url_for('data_loading') }}" class="{% if request.endpoint == 'data_loading' %}active{% endif %}">📂 Data Loading</a></li>
+            <li><a href="{{ url_for('cleaning_page') }}" class="{% if request.endpoint == 'cleaning_page' %}active{% endif %}">🧹 Cleaning</a></li>
+            <li><a href="{{ url_for('eda_page') }}" class="{% if request.endpoint == 'eda_page' or request.endpoint == 'eda' %}active{% endif %}">📊 EDA</a></li>
+            <li><a href="{{ url_for('insights_page') }}" class="{% if request.endpoint == 'insights_page' %}active{% endif %}">💡 Insights</a></li>
+            <li><a href="{{ url_for('feature_engg_page') }}" class="{% if request.endpoint == 'feature_engg_page' %}active{% endif %}">⚙️ Feature Engg</a></li>
+            <li><a href="{{ url_for('train_model') }}" class="{% if request.endpoint == 'train_model' %}active{% endif %}">🤖 Train</a></li>
+            <li><a href="{{ url_for('predict') }}" class="{% if request.endpoint == 'predict' %}active{% endif %}">🎯 Predict</a></li>
+            <li><a href="{{ url_for('workbench_page') }}" class="{% if request.endpoint == 'workbench_page' %}active{% endif %}" style="color: #3fb950; font-weight: bold;">🧪 ML Workbench</a></li>
         </ul>
     </header>
 
@@ -24,7 +29,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Student Placement Prediction Dashboard &bull; Built with Flask &amp; Scikit-Learn</p>
+        <p>&copy; 2026 Student Placement Prediction Dashboard &bull; End-to-End ML Production Lifecycle (M1–M6) &bull; Built with Flask &amp; Scikit-Learn</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,2096 @@
+{
+  "dataset_info": {
+    "total_records": 50000,
+    "features_count": 32,
+    "columns": [
+      "StudentID",
+      "Gender",
+      "City",
+      "CollegeTier",
+      "Stream",
+      "Specialisation",
+      "Hostel",
+      "HistoryOfBacklogs",
+      "SGPA_Sem1",
+      "SGPA_Sem2",
+      "SGPA_Sem3",
+      "SGPA_Sem4",
+      "SGPA_Sem5",
+      "SGPA_Sem6",
+      "SGPA_Sem7",
+      "SGPA_Sem8",
+      "CGPA",
+      "AttendancePercent",
+      "Internships",
+      "Projects",
+      "Workshops",
+      "Certifications",
+      "Publications",
+      "AptitudeTestScore",
+      "SoftSkillsRating",
+      "CodingTestScore",
+      "MockInterviewScore",
+      "ExtraCurricular",
+      "CGPA_Tier",
+      "PlacementStatus",
+      "IsAnomaly",
+      "SalaryPackage"
+    ],
+    "memory_usage_mb": 12.21,
+    "placement_rate_pct": 65.71,
+    "average_cgpa": 7.25,
+    "preview": [
+      {
+        "StudentID": 1,
+        "Gender": "Male",
+        "City": "Ahmedabad",
+        "CollegeTier": "Tier2",
+        "Stream": "ECE",
+        "Specialisation": "Networking",
+        "Hostel": "No",
+        "HistoryOfBacklogs": "No",
+        "SGPA_Sem1": 6.02,
+        "SGPA_Sem2": 6.54,
+        "SGPA_Sem3": 6.52,
+        "SGPA_Sem4": 6.0,
+        "SGPA_Sem5": 6.47,
+        "SGPA_Sem6": 5.91,
+        "SGPA_Sem7": 6.49,
+        "SGPA_Sem8": 5.5,
+        "CGPA": 6.29,
+        "AttendancePercent": 73.3,
+        "Internships": 1,
+        "Projects": 2,
+        "Workshops": NaN,
+        "Certifications": 2,
+        "Publications": 0,
+        "AptitudeTestScore": 66.7,
+        "SoftSkillsRating": 2.2,
+        "CodingTestScore": 49.4,
+        "MockInterviewScore": 47.8,
+        "ExtraCurricular": 0,
+        "CGPA_Tier": "Low",
+        "PlacementStatus": 0,
+        "IsAnomaly": 0,
+        "SalaryPackage": 0.0
+      },
+      {
+        "StudentID": 2,
+        "Gender": "Female",
+        "City": "Mumbai",
+        "CollegeTier": "Tier2",
+        "Stream": "ECE",
+        "Specialisation": "DataScience",
+        "Hostel": "Yes",
+        "HistoryOfBacklogs": "Yes",
+        "SGPA_Sem1": 5.84,
+        "SGPA_Sem2": 5.12,
+        "SGPA_Sem3": 5.34,
+        "SGPA_Sem4": 5.18,
+        "SGPA_Sem5": 5.03,
+        "SGPA_Sem6": 4.93,
+        "SGPA_Sem7": 5.4,
+        "SGPA_Sem8": 5.13,
+        "CGPA": 5.23,
+        "AttendancePercent": 54.5,
+        "Internships": 0,
+        "Projects": 1,
+        "Workshops": 0.0,
+        "Certifications": 1,
+        "Publications": 0,
+        "AptitudeTestScore": 48.2,
+        "SoftSkillsRating": 2.4,
+        "CodingTestScore": 26.7,
+        "MockInterviewScore": 25.8,
+        "ExtraCurricular": 0,
+        "CGPA_Tier": "Low",
+        "PlacementStatus": 0,
+        "IsAnomaly": 0,
+        "SalaryPackage": 0.0
+      },
+      {
+        "StudentID": 3,
+        "Gender": "Male",
+        "City": "Kolkata",
+        "CollegeTier": "Tier2",
+        "Stream": "IT",
+        "Specialisation": "DataScience",
+        "Hostel": "Yes",
+        "HistoryOfBacklogs": "No",
+        "SGPA_Sem1": 4.91,
+        "SGPA_Sem2": 5.29,
+        "SGPA_Sem3": 5.49,
+        "SGPA_Sem4": 5.73,
+        "SGPA_Sem5": 5.33,
+        "SGPA_Sem6": 5.88,
+        "SGPA_Sem7": 5.82,
+        "SGPA_Sem8": 5.67,
+        "CGPA": 5.52,
+        "AttendancePercent": 77.6,
+        "Internships": 1,
+        "Projects": 3,
+        "Workshops": 1.0,
+        "Certifications": 1,
+        "Publications": 0,
+        "AptitudeTestScore": 73.8,
+        "SoftSkillsRating": 2.8,
+        "CodingTestScore": 67.7,
+        "MockInterviewScore": 41.5,
+        "ExtraCurricular": 0,
+        "CGPA_Tier": "Low",
+        "PlacementStatus": 1,
+        "IsAnomaly": 0,
+        "SalaryPackage": 3.89
+      },
+      {
+        "StudentID": 4,
+        "Gender": "Male",
+        "City": "Jaipur",
+        "CollegeTier": "Tier1",
+        "Stream": "CS",
+        "Specialisation": "AI",
+        "Hostel": "No",
+        "HistoryOfBacklogs": "No",
+        "SGPA_Sem1": 7.67,
+        "SGPA_Sem2": 8.03,
+        "SGPA_Sem3": 8.08,
+        "SGPA_Sem4": 7.64,
+        "SGPA_Sem5": 6.86,
+        "SGPA_Sem6": 7.1,
+        "SGPA_Sem7": 7.56,
+        "SGPA_Sem8": 7.39,
+        "CGPA": 7.51,
+        "AttendancePercent": 68.8,
+        "Internships": 1,
+        "Projects": 2,
+        "Workshops": 1.0,
+        "Certifications": 2,
+        "Publications": 0,
+        "AptitudeTestScore": 69.8,
+        "SoftSkillsRating": 2.7,
+        "CodingTestScore": 66.9,
+        "MockInterviewScore": 48.0,
+        "ExtraCurricular": 0,
+        "CGPA_Tier": "Mid",
+        "PlacementStatus": 1,
+        "IsAnomaly": 0,
+        "SalaryPackage": 8.37
+      },
+      {
+        "StudentID": 5,
+        "Gender": "Male",
+        "City": "Pune",
+        "CollegeTier": "Tier2",
+        "Stream": "IT",
+        "Specialisation": "DataScience",
+        "Hostel": "Yes",
+        "HistoryOfBacklogs": "No",
+        "SGPA_Sem1": 8.14,
+        "SGPA_Sem2": 8.97,
+        "SGPA_Sem3": 8.36,
+        "SGPA_Sem4": 8.55,
+        "SGPA_Sem5": 8.55,
+        "SGPA_Sem6": 8.38,
+        "SGPA_Sem7": 9.1,
+        "SGPA_Sem8": 8.86,
+        "CGPA": 8.65,
+        "AttendancePercent": 95.8,
+        "Internships": 2,
+        "Projects": 3,
+        "Workshops": NaN,
+        "Certifications": 4,
+        "Publications": 1,
+        "AptitudeTestScore": 73.1,
+        "SoftSkillsRating": 2.1,
+        "CodingTestScore": 71.7,
+        "MockInterviewScore": 61.7,
+        "ExtraCurricular": 1,
+        "CGPA_Tier": "High",
+        "PlacementStatus": 1,
+        "IsAnomaly": 0,
+        "SalaryPackage": 18.99
+      }
+    ]
+  },
+  "insights": [
+    "Overall Student Placement Rate: 65.71% across 50000 candidates.",
+    "Average Cohort CGPA: 7.25 on a 10.0 scale.",
+    "Classification Accuracy: Random Forest achieves 90.76% test accuracy.",
+    "Salary Package Regression: Workbench Ridge/Polynomial models achieve R\u00b2 of 0.653.",
+    "Feature Importance: CodingTestScore and CGPA are the top 2 predictors of both placement status and salary package."
+  ],
+  "baseline_classification": {
+    "accuracy": 90.76,
+    "precision": 90.89,
+    "recall": 95.51,
+    "f1_score": 93.14,
+    "train_samples": 40000,
+    "test_samples": 10000
+  },
+  "baseline_regression": {
+    "r2_score": 0.7598,
+    "mae": 2.78
+  },
+  "missing_values": {
+    "audit": {
+      "total_rows": 50000,
+      "audit_table": [
+        {
+          "column": "StudentID",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Gender",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "City",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "CollegeTier",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Stream",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Specialisation",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Hostel",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "HistoryOfBacklogs",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem1",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem2",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem3",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem4",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem5",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem6",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem7",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SGPA_Sem8",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "CGPA",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "AttendancePercent",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Internships",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Projects",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Workshops",
+          "dtype": "float64",
+          "missing_count": 4488,
+          "missing_pct": 8.98,
+          "non_missing_count": 45512
+        },
+        {
+          "column": "Certifications",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "Publications",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "AptitudeTestScore",
+          "dtype": "float64",
+          "missing_count": 4029,
+          "missing_pct": 8.06,
+          "non_missing_count": 45971
+        },
+        {
+          "column": "SoftSkillsRating",
+          "dtype": "float64",
+          "missing_count": 3526,
+          "missing_pct": 7.05,
+          "non_missing_count": 46474
+        },
+        {
+          "column": "CodingTestScore",
+          "dtype": "float64",
+          "missing_count": 2976,
+          "missing_pct": 5.95,
+          "non_missing_count": 47024
+        },
+        {
+          "column": "MockInterviewScore",
+          "dtype": "float64",
+          "missing_count": 4957,
+          "missing_pct": 9.91,
+          "non_missing_count": 45043
+        },
+        {
+          "column": "ExtraCurricular",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "CGPA_Tier",
+          "dtype": "str",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "PlacementStatus",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "IsAnomaly",
+          "dtype": "int64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        },
+        {
+          "column": "SalaryPackage",
+          "dtype": "float64",
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "non_missing_count": 50000
+        }
+      ],
+      "columns_with_missing": [
+        "Workshops",
+        "AptitudeTestScore",
+        "SoftSkillsRating",
+        "CodingTestScore",
+        "MockInterviewScore"
+      ]
+    },
+    "mechanisms": [
+      {
+        "mechanism": "MCAR (Missing Completely at Random)",
+        "definition": "Missingness probability is completely independent of both observed and unobserved values.",
+        "dataset_example": "A student accidentally missed submitting optional certification certificates or workshop attendance log due to technical web portal timeout.",
+        "recommended_treatment": "Listwise deletion or mean/median imputation without introducing bias."
+      },
+      {
+        "mechanism": "MAR (Missing at Random)",
+        "definition": "Missingness depends systematically on observed data, but not on the missing value itself.",
+        "dataset_example": "Freshmen or second-year students from Tier 3 colleges are less likely to report Mock Interview scores because mock drives were scheduled only for final-year candidates.",
+        "recommended_treatment": "Conditional / Multiple Imputation (KNN or MICE) conditioned on CollegeTier and Stream."
+      },
+      {
+        "mechanism": "MNAR (Missing Not at Random)",
+        "definition": "Missingness depends directly on the unobserved value itself.",
+        "dataset_example": "Students who scored very poorly on coding assessments chose not to report or save their coding score.",
+        "recommended_treatment": "Explicit missingness indicator flag (Binary Dummy variable) + median imputation to preserve the informative negative signal."
+      }
+    ],
+    "row_deletion": {
+      "treatment": "Listwise Row Deletion (dropna)",
+      "rows_before": 50000,
+      "rows_after": 32877,
+      "rows_dropped": 17123,
+      "retention_pct": 65.75
+    },
+    "method_comparison": [
+      {
+        "method": "Listwise Deletion",
+        "pros": "Simple, no assumption on missing distribution",
+        "cons": "Reduces sample size and power, introduces bias under MAR/MNAR",
+        "leakage_risk": "None"
+      },
+      {
+        "method": "Median Imputation",
+        "pros": "Robust to extreme outliers, fast, deterministic",
+        "cons": "Underestimates variance and distorts feature covariance",
+        "leakage_risk": "Must compute median on Train fold only"
+      },
+      {
+        "method": "KNN Imputation",
+        "pros": "Captures local multi-attribute relationships",
+        "cons": "Computationally expensive at O(N) inference time",
+        "leakage_risk": "Must fit KNN tree on Train only"
+      },
+      {
+        "method": "MICE (Iterative)",
+        "pros": "Preserves multivariate distributions and standard errors",
+        "cons": "Iterative chained equations require longer training time",
+        "leakage_risk": "Chained regressors must fit on Train only"
+      }
+    ],
+    "chart_path": "static/charts/missing_values_audit.png"
+  },
+  "outliers": {
+    "iqr_table": [
+      {
+        "variable": "CGPA",
+        "q1": 6.04,
+        "median": 7.25,
+        "q3": 8.48,
+        "iqr": 2.44,
+        "lower_bound": 2.38,
+        "upper_bound": 12.14,
+        "potential_outliers": 0,
+        "outlier_pct": 0.0
+      },
+      {
+        "variable": "CodingTestScore",
+        "q1": 45.9,
+        "median": 57.7,
+        "q3": 73.3,
+        "iqr": 27.4,
+        "lower_bound": 4.8,
+        "upper_bound": 114.4,
+        "potential_outliers": 408,
+        "outlier_pct": 0.82
+      },
+      {
+        "variable": "AptitudeTestScore",
+        "q1": 58.5,
+        "median": 69.9,
+        "q3": 79.7,
+        "iqr": 21.2,
+        "lower_bound": 26.7,
+        "upper_bound": 111.5,
+        "potential_outliers": 0,
+        "outlier_pct": 0.0
+      },
+      {
+        "variable": "SalaryPackage",
+        "q1": 0.0,
+        "median": 8.43,
+        "q3": 18.41,
+        "iqr": 18.41,
+        "lower_bound": -27.62,
+        "upper_bound": 46.03,
+        "potential_outliers": 0,
+        "outlier_pct": 0.0
+      }
+    ],
+    "boxplots_chart": "static/charts/outlier_boxplots.png",
+    "treatments": {
+      "remove_impact": {
+        "original_clean_records": 50000,
+        "records_after_removal": 42848,
+        "records_removed": 7152,
+        "retention_pct": 85.7
+      },
+      "retain_impact": {
+        "original_clean_records": 50000,
+        "records_retained": 50000,
+        "records_removed": 0,
+        "retention_pct": 100.0
+      },
+      "winsorize_comparison": [
+        {
+          "variable": "CGPA",
+          "mean_before": 7.25,
+          "mean_after": 7.25,
+          "median_before": 7.25,
+          "median_after": 7.25,
+          "std_before": 1.62,
+          "std_after": 1.62
+        },
+        {
+          "variable": "CodingTestScore",
+          "mean_before": 57.41,
+          "mean_after": 57.43,
+          "median_before": 57.7,
+          "median_after": 57.7,
+          "std_before": 20.98,
+          "std_after": 20.93
+        },
+        {
+          "variable": "AptitudeTestScore",
+          "mean_before": 68.86,
+          "mean_after": 68.86,
+          "median_before": 69.9,
+          "median_after": 69.9,
+          "std_before": 15.37,
+          "std_after": 15.37
+        },
+        {
+          "variable": "SalaryPackage",
+          "mean_before": 9.54,
+          "mean_after": 9.54,
+          "median_before": 8.43,
+          "median_after": 8.43,
+          "std_before": 8.82,
+          "std_after": 8.82
+        }
+      ],
+      "method_comparison_table": [
+        {
+          "method": "Remove Outliers (IQR Filtering)",
+          "records_removed": "7,152",
+          "data_preserved_pct": "85.7%",
+          "effect": "Eliminates all student profiles outside Q1 - 1.5*IQR and Q3 + 1.5*IQR bounds"
+        },
+        {
+          "method": "Retain Outliers (Keep Original)",
+          "records_removed": "0",
+          "data_preserved_pct": "100.0%",
+          "effect": "Preserves genuine high-tier super-dream packages and low-score anomalies"
+        },
+        {
+          "method": "Winsorization (Bound Capping)",
+          "records_removed": "0",
+          "data_preserved_pct": "100.0%",
+          "effect": "Caps extreme packages at upper bound without dropping any student records"
+        }
+      ]
+    }
+  },
+  "scaling": {
+    "standard_scaler": {
+      "scaler_name": "StandardScaler (Z-score)",
+      "formula": "z = (x - mean) / std",
+      "fitted_parameters": {
+        "CGPA": {
+          "mean": 7.247,
+          "scale": 1.6105
+        },
+        "CodingTestScore": {
+          "mean": 57.4281,
+          "scale": 20.8887
+        },
+        "AptitudeTestScore": {
+          "mean": 68.8701,
+          "scale": 15.3569
+        },
+        "AttendancePercent": {
+          "mean": 76.7342,
+          "scale": 12.4385
+        }
+      },
+      "train_scaled": "           CGPA  CodingTestScore  AptitudeTestScore  AttendancePercent\n22368 -0.923284        -1.380080          -0.727365          -1.023771\n40175 -1.655963        -1.547635          -0.701318          -2.004595\n34288  1.318217         1.080581           0.392649           0.093725\n46164 -0.544526         0.089614           0.425208          -0.975534\n11235 -0.594199         0.400787           0.496837          -0.412766\n...         ...              ...                ...                ...\n7253  -1.631126        -1.499762          -1.489236          -0.959455\n13063 -1.593871        -1.432740          -1.196209          -1.281037\n44148 -1.364133        -1.155078          -1.560865          -1.747330\n988    1.709392         0.889090           1.050332           1.388090\n18301  0.039133         0.410362           1.128473          -0.091185\n\n[34568 rows x 4 columns]",
+      "test_scaled": "           CGPA  CodingTestScore  AptitudeTestScore  AttendancePercent\n2903   0.175734        -0.269432          -0.349686           0.005290\n33693  1.243707        -0.245495          -0.095729          -0.034908\n27509 -1.171650        -1.332208          -1.560865          -0.718269\n44174 -0.749428        -0.317304          -0.024100          -0.276094\n40824  0.411682        -0.489646          -0.024100           0.021369\n...         ...              ...                ...                ...\n10402  0.175734        -0.025280           0.451255          -0.067066\n44532 -0.836356        -0.001344          -0.603643          -0.396687\n188    0.237826        -0.614116           0.698700           0.359029\n40694  1.256125         0.980048           0.711723           1.042390\n19742 -1.227532        -0.121026          -0.818529           0.648453\n\n[8642 rows x 4 columns]",
+      "stats_before": [
+        {
+          "feature": "CGPA",
+          "mean": 7.247,
+          "std": 1.6105,
+          "min": 4.0,
+          "q25": 6.04,
+          "median": 7.25,
+          "q75": 8.47,
+          "max": 10.0,
+          "iqr": 2.43
+        },
+        {
+          "feature": "CodingTestScore",
+          "mean": 57.4281,
+          "std": 20.8887,
+          "min": 0.0,
+          "q25": 46.1,
+          "median": 57.7,
+          "q75": 73.1,
+          "max": 100.0,
+          "iqr": 27.0
+        },
+        {
+          "feature": "AptitudeTestScore",
+          "mean": 68.8701,
+          "std": 15.3569,
+          "min": 30.0,
+          "q25": 58.5,
+          "median": 70.0,
+          "q75": 79.7,
+          "max": 100.0,
+          "iqr": 21.2
+        },
+        {
+          "feature": "AttendancePercent",
+          "mean": 76.7342,
+          "std": 12.4385,
+          "min": 50.0,
+          "q25": 67.7,
+          "median": 77.2,
+          "q75": 85.9,
+          "max": 100.0,
+          "iqr": 18.2
+        }
+      ],
+      "stats_after": [
+        {
+          "feature": "CGPA",
+          "mean": -0.0,
+          "std": 1.0,
+          "min": -2.0161,
+          "q25": -0.7494,
+          "median": 0.0019,
+          "q75": 0.7594,
+          "max": 1.7094,
+          "iqr": 1.5088
+        },
+        {
+          "feature": "CodingTestScore",
+          "mean": -0.0,
+          "std": 1.0,
+          "min": -2.7492,
+          "q25": -0.5423,
+          "median": 0.013,
+          "q75": 0.7503,
+          "max": 2.038,
+          "iqr": 1.2926
+        },
+        {
+          "feature": "AptitudeTestScore",
+          "mean": 0.0,
+          "std": 1.0,
+          "min": -2.5311,
+          "q25": -0.6753,
+          "median": 0.0736,
+          "q75": 0.7052,
+          "max": 2.0271,
+          "iqr": 1.3805
+        },
+        {
+          "feature": "AttendancePercent",
+          "mean": -0.0,
+          "std": 1.0,
+          "min": -2.1493,
+          "q25": -0.7263,
+          "median": 0.0374,
+          "q75": 0.7369,
+          "max": 1.8705,
+          "iqr": 1.4632
+        }
+      ]
+    },
+    "minmax_scaler": {
+      "scaler_name": "MinMaxScaler",
+      "formula": "x_norm = (x - min) / (max - min)",
+      "fitted_parameters": {
+        "CGPA": {
+          "min": 4.0,
+          "max": 10.0
+        },
+        "CodingTestScore": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "AptitudeTestScore": {
+          "min": 30.0,
+          "max": 100.0
+        },
+        "AttendancePercent": {
+          "min": 50.0,
+          "max": 100.0
+        }
+      },
+      "train_scaled": "           CGPA  CodingTestScore  AptitudeTestScore  AttendancePercent\n22368  0.293333            0.286           0.395714              0.280\n40175  0.096667            0.251           0.401429              0.036\n34288  0.895000            0.800           0.641429              0.558\n46164  0.395000            0.593           0.648571              0.292\n11235  0.381667            0.658           0.664286              0.432\n...         ...              ...                ...                ...\n7253   0.103333            0.261           0.228571              0.296\n13063  0.113333            0.275           0.292857              0.216\n44148  0.175000            0.333           0.212857              0.100\n988    1.000000            0.760           0.785714              0.880\n18301  0.551667            0.660           0.802857              0.512\n\n[34568 rows x 4 columns]",
+      "test_scaled": "           CGPA  CodingTestScore  AptitudeTestScore  AttendancePercent\n2903   0.588333            0.518           0.478571              0.536\n33693  0.875000            0.523           0.534286              0.526\n27509  0.226667            0.296           0.212857              0.356\n44174  0.340000            0.508           0.550000              0.466\n40824  0.651667            0.472           0.550000              0.540\n...         ...              ...                ...                ...\n10402  0.588333            0.569           0.654286              0.518\n44532  0.316667            0.574           0.422857              0.436\n188    0.605000            0.446           0.708571              0.624\n40694  0.878333            0.779           0.711429              0.794\n19742  0.211667            0.549           0.375714              0.696\n\n[8642 rows x 4 columns]",
+      "stats_before": [
+        {
+          "feature": "CGPA",
+          "mean": 7.247,
+          "std": 1.6105,
+          "min": 4.0,
+          "q25": 6.04,
+          "median": 7.25,
+          "q75": 8.47,
+          "max": 10.0,
+          "iqr": 2.43
+        },
+        {
+          "feature": "CodingTestScore",
+          "mean": 57.4281,
+          "std": 20.8887,
+          "min": 0.0,
+          "q25": 46.1,
+          "median": 57.7,
+          "q75": 73.1,
+          "max": 100.0,
+          "iqr": 27.0
+        },
+        {
+          "feature": "AptitudeTestScore",
+          "mean": 68.8701,
+          "std": 15.3569,
+          "min": 30.0,
+          "q25": 58.5,
+          "median": 70.0,
+          "q75": 79.7,
+          "max": 100.0,
+          "iqr": 21.2
+        },
+        {
+          "feature": "AttendancePercent",
+          "mean": 76.7342,
+          "std": 12.4385,
+          "min": 50.0,
+          "q25": 67.7,
+          "median": 77.2,
+          "q75": 85.9,
+          "max": 100.0,
+          "iqr": 18.2
+        }
+      ],
+      "stats_after": [
+        {
+          "feature": "CGPA",
+          "mean": 0.5412,
+          "std": 0.2684,
+          "min": 0.0,
+          "q25": 0.34,
+          "median": 0.5417,
+          "q75": 0.745,
+          "max": 1.0,
+          "iqr": 0.405
+        },
+        {
+          "feature": "CodingTestScore",
+          "mean": 0.5743,
+          "std": 0.2089,
+          "min": 0.0,
+          "q25": 0.461,
+          "median": 0.577,
+          "q75": 0.731,
+          "max": 1.0,
+          "iqr": 0.27
+        },
+        {
+          "feature": "AptitudeTestScore",
+          "mean": 0.5553,
+          "std": 0.2194,
+          "min": 0.0,
+          "q25": 0.4071,
+          "median": 0.5714,
+          "q75": 0.71,
+          "max": 1.0,
+          "iqr": 0.3029
+        },
+        {
+          "feature": "AttendancePercent",
+          "mean": 0.5347,
+          "std": 0.2488,
+          "min": 0.0,
+          "q25": 0.354,
+          "median": 0.544,
+          "q75": 0.718,
+          "max": 1.0,
+          "iqr": 0.364
+        }
+      ]
+    },
+    "robust_scaler": {
+      "scaler_name": "RobustScaler",
+      "formula": "x_rob = (x - median) / IQR",
+      "fitted_parameters": {
+        "CGPA": {
+          "center_median": 7.25,
+          "scale_iqr": 2.43
+        },
+        "CodingTestScore": {
+          "center_median": 57.7,
+          "scale_iqr": 27.0
+        },
+        "AptitudeTestScore": {
+          "center_median": 70.0,
+          "scale_iqr": 21.2
+        },
+        "AttendancePercent": {
+          "center_median": 77.2,
+          "scale_iqr": 18.2
+        }
+      },
+      "train_scaled": "           CGPA  CodingTestScore  AptitudeTestScore  AttendancePercent\n22368 -0.613169        -1.077778          -0.580189          -0.725275\n40175 -1.098765        -1.207407          -0.561321          -1.395604\n34288  0.872428         0.825926           0.231132           0.038462\n46164 -0.362140         0.059259           0.254717          -0.692308\n11235 -0.395062         0.300000           0.306604          -0.307692\n...         ...              ...                ...                ...\n7253  -1.082305        -1.170370          -1.132075          -0.681319\n13063 -1.057613        -1.118519          -0.919811          -0.901099\n44148 -0.905350        -0.903704          -1.183962          -1.219780\n988    1.131687         0.677778           0.707547           0.923077\n18301  0.024691         0.307407           0.764151          -0.087912\n\n[34568 rows x 4 columns]",
+      "test_scaled": "           CGPA  CodingTestScore  AptitudeTestScore  AttendancePercent\n2903   0.115226        -0.218519          -0.306604          -0.021978\n33693  0.823045        -0.200000          -0.122642          -0.049451\n27509 -0.777778        -1.040741          -1.183962          -0.516484\n44174 -0.497942        -0.255556          -0.070755          -0.214286\n40824  0.271605        -0.388889          -0.070755          -0.010989\n...         ...              ...                ...                ...\n10402  0.115226        -0.029630           0.273585          -0.071429\n44532 -0.555556        -0.011111          -0.490566          -0.296703\n188    0.156379        -0.485185           0.452830           0.219780\n40694  0.831276         0.748148           0.462264           0.686813\n19742 -0.814815        -0.103704          -0.646226           0.417582\n\n[8642 rows x 4 columns]",
+      "stats_before": [
+        {
+          "feature": "CGPA",
+          "mean": 7.247,
+          "std": 1.6105,
+          "min": 4.0,
+          "q25": 6.04,
+          "median": 7.25,
+          "q75": 8.47,
+          "max": 10.0,
+          "iqr": 2.43
+        },
+        {
+          "feature": "CodingTestScore",
+          "mean": 57.4281,
+          "std": 20.8887,
+          "min": 0.0,
+          "q25": 46.1,
+          "median": 57.7,
+          "q75": 73.1,
+          "max": 100.0,
+          "iqr": 27.0
+        },
+        {
+          "feature": "AptitudeTestScore",
+          "mean": 68.8701,
+          "std": 15.3569,
+          "min": 30.0,
+          "q25": 58.5,
+          "median": 70.0,
+          "q75": 79.7,
+          "max": 100.0,
+          "iqr": 21.2
+        },
+        {
+          "feature": "AttendancePercent",
+          "mean": 76.7342,
+          "std": 12.4385,
+          "min": 50.0,
+          "q25": 67.7,
+          "median": 77.2,
+          "q75": 85.9,
+          "max": 100.0,
+          "iqr": 18.2
+        }
+      ],
+      "stats_after": [
+        {
+          "feature": "CGPA",
+          "mean": -0.0012,
+          "std": 0.6628,
+          "min": -1.3374,
+          "q25": -0.4979,
+          "median": 0.0,
+          "q75": 0.5021,
+          "max": 1.1317,
+          "iqr": 1.0
+        },
+        {
+          "feature": "CodingTestScore",
+          "mean": -0.0101,
+          "std": 0.7737,
+          "min": -2.137,
+          "q25": -0.4296,
+          "median": 0.0,
+          "q75": 0.5704,
+          "max": 1.5667,
+          "iqr": 1.0
+        },
+        {
+          "feature": "AptitudeTestScore",
+          "mean": -0.0533,
+          "std": 0.7244,
+          "min": -1.8868,
+          "q25": -0.5425,
+          "median": 0.0,
+          "q75": 0.4575,
+          "max": 1.4151,
+          "iqr": 1.0
+        },
+        {
+          "feature": "AttendancePercent",
+          "mean": -0.0256,
+          "std": 0.6834,
+          "min": -1.4945,
+          "q25": -0.522,
+          "median": 0.0,
+          "q75": 0.478,
+          "max": 1.2527,
+          "iqr": 1.0
+        }
+      ]
+    },
+    "leakage_demo": {
+      "feature": "CGPA",
+      "leaky_fit_dataset": "Full Sample (Train + Test combined)",
+      "leaky_mean": 7.2595,
+      "clean_fit_dataset": "Train Split Only (80%)",
+      "clean_mean": 7.2791,
+      "leakage_delta": 0.019523,
+      "explanation": "Fitting scalers on test data bleeds test distribution information into the model, generating overly optimistic validation scores."
+    },
+    "comparison_matrix": [
+      {
+        "scaler": "StandardScaler",
+        "formula": "z = (x - \u03bc) / \u03c3",
+        "bounded": "No (-\u221e to +\u221e)",
+        "outlier_sensitivity": "High (Mean & Std distorted by outliers)",
+        "best_use_case": "Gradient Descent, Linear & Logistic Regression, PCA, K-Means"
+      },
+      {
+        "scaler": "MinMaxScaler",
+        "formula": "x_norm = (x - min) / (max - min)",
+        "bounded": "Yes ([0, 1])",
+        "outlier_sensitivity": "Very High (Compresses inliers into narrow band)",
+        "best_use_case": "Neural Networks, KNN distance metrics, image intensity"
+      },
+      {
+        "scaler": "RobustScaler",
+        "formula": "x_rob = (x - Q2) / (Q3 - Q1)",
+        "bounded": "No",
+        "outlier_sensitivity": "Immune / Low (Median & IQR are outlier-resistant)",
+        "best_use_case": "Heavy-tailed distributions, real-world skewed salary/metric data"
+      }
+    ],
+    "model_guidance": [
+      {
+        "model_family": "Linear & Logistic Regression",
+        "requires_scaling": "Yes",
+        "reason": "Features on larger scales dominate gradient updates and bias regularisation penalties."
+      },
+      {
+        "model_family": "K-Nearest Neighbors & K-Means",
+        "requires_scaling": "Yes",
+        "reason": "Euclidean distance calculations are completely distorted by unscaled feature magnitudes."
+      },
+      {
+        "model_family": "Principal Component Analysis (PCA)",
+        "requires_scaling": "Yes",
+        "reason": "Variance-maximization projects onto whatever axis has arbitrarily larger units."
+      },
+      {
+        "model_family": "Decision Trees & Random Forests",
+        "requires_scaling": "No",
+        "reason": "Greedy split criteria evaluate individual features independently via rank-order thresholds."
+      }
+    ],
+    "chart_path": "static/charts/scaling_comparison.png"
+  },
+  "duplicates": {
+    "exact_duplicates": {
+      "total_records": 50000,
+      "unique_records": 50000,
+      "duplicate_count": 0,
+      "duplicate_pct": 0.0,
+      "has_exact_duplicates": false,
+      "status": "No exact duplicates detected"
+    },
+    "subset_duplicates": {
+      "total_records": 50000,
+      "unique_records": 49999,
+      "duplicate_count": 1,
+      "duplicate_pct": 0.002,
+      "subset_columns": [
+        "CGPA",
+        "AttendancePercent",
+        "CodingTestScore",
+        "AptitudeTestScore",
+        "Stream",
+        "CollegeTier"
+      ],
+      "has_subset_duplicates": true
+    },
+    "treatment_comparison": [
+      {
+        "strategy": "Retain All Records (Baseline)",
+        "description": "Preserve all records without deleting duplicate score combinations.",
+        "original_records": 50000,
+        "records_removed": 0,
+        "remaining_records": 50000,
+        "retention_pct": 100.0,
+        "risk_assessment": "Zero risk of data loss. Preserves legitimate student cohorts with standardized test percentiles."
+      },
+      {
+        "strategy": "Exact-Row Deletion",
+        "description": "Drop records where every feature across all columns is strictly identical.",
+        "original_records": 50000,
+        "records_removed": 0,
+        "remaining_records": 50000,
+        "retention_pct": 100.0,
+        "risk_assessment": "Safe. True identical rows are pipeline logging repetitions or database insertion duplicates."
+      },
+      {
+        "strategy": "Academic-Key Subset Deletion",
+        "description": "Drop records sharing identical [CGPA, AttendancePercent, CodingTestScore, ...].",
+        "original_records": 50000,
+        "records_removed": 1,
+        "remaining_records": 49999,
+        "retention_pct": 99.998,
+        "risk_assessment": "High Risk. In a cohort of 50,000 university students, distinct candidates frequently earn identical rounded CGPAs and standardized aptitude percentiles. Removing them distorts branch placement rates."
+      }
+    ],
+    "risks": [
+      {
+        "factor": "Coincidental Score Parity in Large Cohorts",
+        "explanation": "In large engineering institutions (50,000 students), integer score scales (e.g. 75/100 aptitude, 80/100 coding, 7.5 CGPA) naturally lead to multiple students holding the same numerical scores."
+      },
+      {
+        "factor": "Stream and Tier Granularity",
+        "explanation": "Categorical fields like Stream (CS, IT) and CollegeTier (Tier 1, Tier 2) have low cardinalities. High score overlap within these buckets is expected and valid."
+      },
+      {
+        "factor": "Impact on Placement Statistics",
+        "explanation": "Deleting subset duplicates would artificially bias placement percentage estimations and training distributions, producing unfair predictions for common score profiles."
+      }
+    ],
+    "verdict": "Exact row duplicates: 0 (0.0%). Academic metric duplicates represent valid independent students across the 50k cohort."
+  },
+  "workbench": {
+    "dataset_split": {
+      "train": 22998,
+      "val": 4929,
+      "test": 4929,
+      "total": 32856
+    },
+    "benchmark_features": [
+      "CGPA",
+      "CodingTestScore",
+      "AptitudeTestScore",
+      "SoftSkillsRating",
+      "Internships",
+      "Projects",
+      "MockInterviewScore"
+    ],
+    "target_variable": "SalaryPackage",
+    "models": [
+      {
+        "key": "baseline_gd",
+        "name": "Gradient Descent (CGPA Baseline)",
+        "category": "Simple Linear",
+        "family": "Simple Linear",
+        "formula": "\u03b8 = \u03b8 - \u03b1\u2207J",
+        "parameters": "\u03b8 = \u03b8 - \u03b1\u2207J",
+        "train_rmse": 4.2636,
+        "val_rmse": 4.3072,
+        "test_rmse": 4.4316,
+        "test_r2": 0.579,
+        "test_adj_r2": 0.5784,
+        "test_mae": 3.4281,
+        "test_mse": 19.6395,
+        "rmse": 4.4316,
+        "r2": 0.579,
+        "mae": 3.4281,
+        "mse": 19.6395,
+        "adjusted_r2": 0.5784
+      },
+      {
+        "key": "linear_sklearn",
+        "name": "Multiple Linear Regression (OLS)",
+        "category": "Multivariate Linear",
+        "family": "Multivariate Linear",
+        "formula": "min ||y - X\u03b8||\u00b2",
+        "parameters": "min ||y - X\u03b8||\u00b2",
+        "train_rmse": 3.9506,
+        "val_rmse": 3.9824,
+        "test_rmse": 4.0226,
+        "test_r2": 0.6532,
+        "test_adj_r2": 0.6527,
+        "test_mae": 3.2403,
+        "test_mse": 16.1809,
+        "rmse": 4.0226,
+        "r2": 0.6532,
+        "mae": 3.2403,
+        "mse": 16.1809,
+        "adjusted_r2": 0.6527
+      },
+      {
+        "key": "polynomial",
+        "name": "Polynomial Regression (Degree 2)",
+        "category": "Non-Linear Expansion",
+        "family": "Non-Linear Expansion",
+        "formula": "Feature Crosses (x_i * x_j)",
+        "parameters": "Feature Crosses (x_i * x_j)",
+        "train_rmse": 3.6146,
+        "val_rmse": 3.6194,
+        "test_rmse": 3.6401,
+        "test_r2": 0.716,
+        "test_adj_r2": 0.7156,
+        "test_mae": 2.9555,
+        "test_mse": 13.2503,
+        "rmse": 3.6401,
+        "r2": 0.716,
+        "mae": 2.9555,
+        "mse": 13.2503,
+        "adjusted_r2": 0.7156
+      },
+      {
+        "key": "ridge",
+        "name": "Ridge Regression (L2 Penalty)",
+        "category": "Regularized Linear",
+        "family": "Regularized Linear",
+        "formula": "Loss + \u03bb||\u03b8||\u2082\u00b2",
+        "parameters": "Loss + \u03bb||\u03b8||\u2082\u00b2",
+        "train_rmse": 3.9506,
+        "val_rmse": 3.9824,
+        "test_rmse": 4.0226,
+        "test_r2": 0.6532,
+        "test_adj_r2": 0.6527,
+        "test_mae": 3.2406,
+        "test_mse": 16.1814,
+        "rmse": 4.0226,
+        "r2": 0.6532,
+        "mae": 3.2406,
+        "mse": 16.1814,
+        "adjusted_r2": 0.6527
+      },
+      {
+        "key": "lasso",
+        "name": "Lasso Regression (L1 Penalty)",
+        "category": "Sparse Regularized",
+        "family": "Sparse Regularized",
+        "formula": "Loss + \u03bb||\u03b8||\u2081",
+        "parameters": "Loss + \u03bb||\u03b8||\u2081",
+        "train_rmse": 3.9539,
+        "val_rmse": 3.9877,
+        "test_rmse": 4.035,
+        "test_r2": 0.651,
+        "test_adj_r2": 0.6505,
+        "test_mae": 3.2504,
+        "test_mse": 16.2816,
+        "rmse": 4.035,
+        "r2": 0.651,
+        "mae": 3.2504,
+        "mse": 16.2816,
+        "adjusted_r2": 0.6505
+      },
+      {
+        "key": "elastic_net",
+        "name": "Elastic Net (L1 + L2 Regularization)",
+        "category": "Hybrid Regularized",
+        "family": "Hybrid Regularized",
+        "formula": "Loss + r\u03bb||\u03b8||\u2081 + (1-r)\u03bb||\u03b8||\u2082\u00b2",
+        "parameters": "Loss + r\u03bb||\u03b8||\u2081 + (1-r)\u03bb||\u03b8||\u2082\u00b2",
+        "train_rmse": 3.9575,
+        "val_rmse": 3.991,
+        "test_rmse": 4.0368,
+        "test_r2": 0.6507,
+        "test_adj_r2": 0.6502,
+        "test_mae": 3.2682,
+        "test_mse": 16.2954,
+        "rmse": 4.0368,
+        "r2": 0.6507,
+        "mae": 3.2682,
+        "mse": 16.2954,
+        "adjusted_r2": 0.6502
+      }
+    ],
+    "models_dict": {
+      "baseline_gd": {
+        "key": "baseline_gd",
+        "name": "Gradient Descent (CGPA Baseline)",
+        "category": "Simple Linear",
+        "family": "Simple Linear",
+        "formula": "\u03b8 = \u03b8 - \u03b1\u2207J",
+        "parameters": "\u03b8 = \u03b8 - \u03b1\u2207J",
+        "train_rmse": 4.2636,
+        "val_rmse": 4.3072,
+        "test_rmse": 4.4316,
+        "test_r2": 0.579,
+        "test_adj_r2": 0.5784,
+        "test_mae": 3.4281,
+        "test_mse": 19.6395,
+        "rmse": 4.4316,
+        "r2": 0.579,
+        "mae": 3.4281,
+        "mse": 19.6395,
+        "adjusted_r2": 0.5784
+      },
+      "linear_sklearn": {
+        "key": "linear_sklearn",
+        "name": "Multiple Linear Regression (OLS)",
+        "category": "Multivariate Linear",
+        "family": "Multivariate Linear",
+        "formula": "min ||y - X\u03b8||\u00b2",
+        "parameters": "min ||y - X\u03b8||\u00b2",
+        "train_rmse": 3.9506,
+        "val_rmse": 3.9824,
+        "test_rmse": 4.0226,
+        "test_r2": 0.6532,
+        "test_adj_r2": 0.6527,
+        "test_mae": 3.2403,
+        "test_mse": 16.1809,
+        "rmse": 4.0226,
+        "r2": 0.6532,
+        "mae": 3.2403,
+        "mse": 16.1809,
+        "adjusted_r2": 0.6527
+      },
+      "polynomial": {
+        "key": "polynomial",
+        "name": "Polynomial Regression (Degree 2)",
+        "category": "Non-Linear Expansion",
+        "family": "Non-Linear Expansion",
+        "formula": "Feature Crosses (x_i * x_j)",
+        "parameters": "Feature Crosses (x_i * x_j)",
+        "train_rmse": 3.6146,
+        "val_rmse": 3.6194,
+        "test_rmse": 3.6401,
+        "test_r2": 0.716,
+        "test_adj_r2": 0.7156,
+        "test_mae": 2.9555,
+        "test_mse": 13.2503,
+        "rmse": 3.6401,
+        "r2": 0.716,
+        "mae": 2.9555,
+        "mse": 13.2503,
+        "adjusted_r2": 0.7156
+      },
+      "ridge": {
+        "key": "ridge",
+        "name": "Ridge Regression (L2 Penalty)",
+        "category": "Regularized Linear",
+        "family": "Regularized Linear",
+        "formula": "Loss + \u03bb||\u03b8||\u2082\u00b2",
+        "parameters": "Loss + \u03bb||\u03b8||\u2082\u00b2",
+        "train_rmse": 3.9506,
+        "val_rmse": 3.9824,
+        "test_rmse": 4.0226,
+        "test_r2": 0.6532,
+        "test_adj_r2": 0.6527,
+        "test_mae": 3.2406,
+        "test_mse": 16.1814,
+        "rmse": 4.0226,
+        "r2": 0.6532,
+        "mae": 3.2406,
+        "mse": 16.1814,
+        "adjusted_r2": 0.6527
+      },
+      "lasso": {
+        "key": "lasso",
+        "name": "Lasso Regression (L1 Penalty)",
+        "category": "Sparse Regularized",
+        "family": "Sparse Regularized",
+        "formula": "Loss + \u03bb||\u03b8||\u2081",
+        "parameters": "Loss + \u03bb||\u03b8||\u2081",
+        "train_rmse": 3.9539,
+        "val_rmse": 3.9877,
+        "test_rmse": 4.035,
+        "test_r2": 0.651,
+        "test_adj_r2": 0.6505,
+        "test_mae": 3.2504,
+        "test_mse": 16.2816,
+        "rmse": 4.035,
+        "r2": 0.651,
+        "mae": 3.2504,
+        "mse": 16.2816,
+        "adjusted_r2": 0.6505
+      },
+      "elastic_net": {
+        "key": "elastic_net",
+        "name": "Elastic Net (L1 + L2 Regularization)",
+        "category": "Hybrid Regularized",
+        "family": "Hybrid Regularized",
+        "formula": "Loss + r\u03bb||\u03b8||\u2081 + (1-r)\u03bb||\u03b8||\u2082\u00b2",
+        "parameters": "Loss + r\u03bb||\u03b8||\u2081 + (1-r)\u03bb||\u03b8||\u2082\u00b2",
+        "train_rmse": 3.9575,
+        "val_rmse": 3.991,
+        "test_rmse": 4.0368,
+        "test_r2": 0.6507,
+        "test_adj_r2": 0.6502,
+        "test_mae": 3.2682,
+        "test_mse": 16.2954,
+        "rmse": 4.0368,
+        "r2": 0.6507,
+        "mae": 3.2682,
+        "mse": 16.2954,
+        "adjusted_r2": 0.6502
+      }
+    },
+    "best_model": {
+      "key": "polynomial",
+      "name": "Polynomial Regression (Degree 2)",
+      "category": "Non-Linear Expansion",
+      "family": "Non-Linear Expansion",
+      "formula": "Feature Crosses (x_i * x_j)",
+      "parameters": "Feature Crosses (x_i * x_j)",
+      "train_rmse": 3.6146,
+      "val_rmse": 3.6194,
+      "test_rmse": 3.6401,
+      "test_r2": 0.716,
+      "test_adj_r2": 0.7156,
+      "test_mae": 2.9555,
+      "test_mse": 13.2503,
+      "rmse": 3.6401,
+      "r2": 0.716,
+      "mae": 2.9555,
+      "mse": 13.2503,
+      "adjusted_r2": 0.7156
+    },
+    "normal_equation": {
+      "formula": "\u03b8 = (X^T X)^(-1) X^T y",
+      "intercept": -20.6381,
+      "coefficients": [
+        4.29,
+        -0.0589,
+        -0.0692,
+        1.0073,
+        0.1326,
+        0.0994,
+        0.0918
+      ]
+    },
+    "educational_theory": [
+      {
+        "technique": "Normal Equation (OLS Closed-Form)",
+        "equation": "\u03b8 = (X^T X)^(-1) X^T y",
+        "mechanism": "Analytically minimizes sum of squared residuals without learning rate tuning.",
+        "pros": "Exact global minimum in one step; no iterations required.",
+        "cons": "Matrix inversion complexity is O(p^3); ill-conditioned when collinearity exists."
+      },
+      {
+        "technique": "Ridge Regression (L2 Penalty)",
+        "equation": "J(\u03b8) = MSE + \u03bb \u2211 \u03b8_j\u00b2",
+        "mechanism": "Penalizes Euclidean norm of weights; shrinks coefficients toward zero without nullifying them.",
+        "pros": "Handles multicollinearity and prevents weight explosion.",
+        "cons": "Does not perform feature selection (all features retain non-zero weights)."
+      },
+      {
+        "technique": "Lasso Regression (L1 Penalty)",
+        "equation": "J(\u03b8) = MSE + \u03bb \u2211 |\u03b8_j|",
+        "mechanism": "Penalizes absolute weight magnitudes; drives non-informative feature weights strictly to zero.",
+        "pros": "Automatic feature selection resulting in sparse, interpretable models.",
+        "cons": "Arbitrarily selects one feature among correlated predictors and drops the rest."
+      },
+      {
+        "technique": "Elastic Net (Combined L1 + L2)",
+        "equation": "J(\u03b8) = MSE + r\u03bb \u2211 |\u03b8_j| + 0.5(1-r)\u03bb \u2211 \u03b8_j\u00b2",
+        "mechanism": "Convex combination of L1 sparsity and L2 grouping properties.",
+        "pros": "Retains groups of correlated relevant predictors while achieving sparsity.",
+        "cons": "Requires tuning two hyperparameters (alpha and l1_ratio)."
+      }
+    ],
+    "fit_chart": "static/charts/workbench_regression_fits.png",
+    "metrics_chart": "static/charts/workbench_metrics_comparison.png"
+  },
+  "m1_lifecycle": {
+    "lifecycle_stages": [
+      {
+        "stage_id": 1,
+        "name": "Data Ingestion & Dataset Sourcing",
+        "file": "ml/data_loader.py, placement_pipeline.py",
+        "entrypoint": "load_data()",
+        "artifact": "data/placement_predict_50k Dataset1.csv",
+        "description": "Ingestion of 50,000 multi-semester student academic, test score, and placement records."
+      },
+      {
+        "stage_id": 2,
+        "name": "Data Quality Profiling & Schema Audit",
+        "file": "ml/missing_values.py, ml/duplicates.py",
+        "entrypoint": "audit_all_missing_values(), audit_all_duplicates()",
+        "artifact": "outputs/reports/missing_values_report.json, outputs/reports/duplicate_audit.json",
+        "description": "Comprehensive audit of MCAR/MAR/MNAR missingness, exact full-row duplicates, and key subset conflicts."
+      },
+      {
+        "stage_id": 3,
+        "name": "Data Cleaning & Outlier Treatment",
+        "file": "ml/outliers.py, ml/missing_values.py",
+        "entrypoint": "run_complete_outlier_analysis(), compare_imputation_strategies()",
+        "artifact": "outputs/reports/outliers_report.json, static/charts/outlier_boxplots.png",
+        "description": "IQR calculation, Tukey fences, boxplot diagnostics, and empirical comparison of Removal vs Retain vs Winsorization."
+      },
+      {
+        "stage_id": 4,
+        "name": "Feature Engineering & Scaling",
+        "file": "ml/common.py, ml/scaling.py",
+        "entrypoint": "extract_representative_ml_sample(), run_complete_scaling_analysis()",
+        "artifact": "outputs/reports/scaling_report.json, static/charts/scaling_comparison.png",
+        "description": "Derives TechnicalComposite, CGPA tiers, and benchmarks StandardScaler, MinMaxScaler, and RobustScaler without leakage."
+      },
+      {
+        "stage_id": 5,
+        "name": "Leakage-Safe Partitioning (70/15/15)",
+        "file": "ml/common.py",
+        "entrypoint": "prepare_train_val_test_splits()",
+        "artifact": "Split dictionaries (Train, Validation, Held-out Test)",
+        "description": "Strict 3-way partition: Train (fitting), Validation (hyperparameters & calibration), Held-out Test (final benchmark)."
+      },
+      {
+        "stage_id": 6,
+        "name": "Model Training & Regularization",
+        "file": "ml/regression_workbench.py, ml/m2_classification.py, ml/m3_trees.py",
+        "entrypoint": "run_complete_regression_workbench(), train_tree_models()",
+        "artifact": "outputs/models/*.joblib",
+        "description": "Fits Linear GD, Normal Equation OLS, Polynomial, Ridge (L2), Lasso (L1), Elastic Net, Logistic, Random Forest, AdaBoost."
+      },
+      {
+        "stage_id": 7,
+        "name": "Hyperparameter Optimization & Validation",
+        "file": "ml/m5_evaluation.py",
+        "entrypoint": "run_complete_m5_evaluation()",
+        "artifact": "GridSearch / RandomizedSearch results, outputs/reports/m5_evaluation_report.json",
+        "description": "5-Fold Stratified Cross-Validation, Nested CV (Inner 3-Fold / Outer 3-Fold), and learning/validation curves."
+      },
+      {
+        "stage_id": 8,
+        "name": "Unbiased Held-Out Test Evaluation",
+        "file": "ml/m5_evaluation.py, ml/regression_workbench.py",
+        "entrypoint": "evaluate_all_workbench_models()",
+        "artifact": "static/charts/workbench_metrics_comparison.png, static/charts/m5_model_evaluation.png",
+        "description": "Single-pass evaluation on held-out test records reporting MAE, MSE, RMSE, R2, ROC-AUC, PR-AUC, and F1 score."
+      },
+      {
+        "stage_id": 9,
+        "name": "Model Packaging & Artifact Registry",
+        "file": "ml/m6_engineering.py",
+        "entrypoint": "save_model_artifact(), load_model_artifact()",
+        "artifact": "outputs/models/*.joblib + metadata.json (SHA-256 verified)",
+        "description": "Encapsulates model binary, feature schema, preprocessor state, library versions, and cryptographic SHA256 checksums."
+      },
+      {
+        "stage_id": 10,
+        "name": "Validated Prediction Serving",
+        "file": "app.py",
+        "entrypoint": "/api/workbench/predict, /api/workbench/batch-predict",
+        "artifact": "Flask REST JSON endpoints",
+        "description": "High-throughput inference endpoints with runtime schema validation, type coercion, and bounded response times."
+      },
+      {
+        "stage_id": 11,
+        "name": "Production Telemetry & Drift Monitoring",
+        "file": "ml/m6_engineering.py",
+        "entrypoint": "detect_feature_drift(), get_monitoring_telemetry()",
+        "artifact": "outputs/reports/experiment_runs.json, telemetry metrics",
+        "description": "Tracks inference latency, request volume, Kolmogorov-Smirnov distribution shifts, and Population Stability Index (PSI)."
+      },
+      {
+        "stage_id": 12,
+        "name": "Retraining Triggers & Promotion Gate",
+        "file": "ml/m1_lifecycle.py, ml/m6_engineering.py",
+        "entrypoint": "check_retraining_triggers(), evaluate_model_promotion_gate()",
+        "artifact": "Automated retraining policy decision",
+        "description": "Enforces automated pipeline re-run when drift PSI >= 0.20 or error degradation exceeds 5.0%."
+      }
+    ],
+    "educational_theory": {
+      "learning_paradigms": {
+        "supervised": {
+          "title": "Supervised Learning",
+          "definition": "Learning a functional mapping f(X) -> y from labeled historical student records.",
+          "placement_example": "Predicting whether a student gets placed (PlacementStatus: 0 or 1) and expected Salary Package (in LPA) given CGPA, CodingTestScore, and Internships.",
+          "key_challenges": "Class imbalance, label noise, covariate shift between batches, and feature multicollinearity."
+        },
+        "unsupervised": {
+          "title": "Unsupervised Learning",
+          "definition": "Discovering latent structure, student archetypes, and density clusters in feature space X without target labels.",
+          "placement_example": "Clustering students into skill archetypes (e.g., Tech Stars, Balanced Achievers, Upskilling Needed) using K-Means and DBSCAN.",
+          "key_challenges": "Cluster validity evaluation, sensitivity to feature scaling, and absence of an objective ground truth."
+        },
+        "reinforcement": {
+          "title": "Reinforcement Learning",
+          "definition": "Training an agent to maximize cumulative rewards through trial-and-error environment interaction.",
+          "placement_example": "Curriculum optimization & adaptive course recommendation: An agent suggests mock tests or workshops to maximize placement probability with minimal student workload.",
+          "key_challenges": "Delayed feedback, exploration vs exploitation tradeoff, and sample inefficiency in educational settings."
+        }
+      },
+      "training_serving_skew": {
+        "concept": "Training-Serving Skew is the performance discrepancy between training evaluation and production inference.",
+        "root_causes": [
+          "Target Leakage: Including post-placement variables (such as final offer letter status or company allocation) during training.",
+          "Inconsistent Pipelines: Preprocessing features with different imputation/scaling parameters offline vs in Flask production endpoints.",
+          "Covariate Shift: Changes in input distributions P(X) between historical academic years and incoming graduating batches.",
+          "Time Lag & Schema Drift: Missing values or shifted test score grading rubrics not caught before inference."
+        ],
+        "placement_mitigation": "Encapsulating preprocessing and scaling within Scikit-Learn Pipelines fitted solely on training splits, with unified schema validation at both training and inference time."
+      },
+      "feature_store_architecture": {
+        "concept": "A centralized repository coordinating student feature definitions, storage, and retrieval across training and serving.",
+        "dual_storage": {
+          "offline_store": "High-throughput data warehouse / CSV store optimized for historical batch training and semester-by-semester backfills.",
+          "online_store": "Ultra-low-latency key-value cache (e.g., Redis) retrieving student profile features in under 10ms during live portal prediction queries."
+        },
+        "point_in_time_correctness": "Ensures historical student features retrieved for training reflect exactly what was known before campus placement drives commenced."
+      }
+    },
+    "retraining_status": {
+      "drift_psi": 0.08,
+      "drift_threshold": 0.2,
+      "error_degradation_pct": 2.1,
+      "degradation_threshold_pct": 5.0,
+      "retraining_recommended": false,
+      "decision": "MODEL HEALTHY \u2014 PROCEED WITH SERVING"
+    },
+    "flowchart": "m1_lifecycle_flow.png",
+    "demo_batch_result": {
+      "status": "success",
+      "model_key": "polynomial",
+      "model_name": "Polynomial Regression (Degree 2)",
+      "total_processed": 6,
+      "execution_time_ms": 3.39,
+      "mean_salary_lpa": 9.25,
+      "min_salary_lpa": 4.28,
+      "max_salary_lpa": 14.27,
+      "placement_rate_pct": 83.3,
+      "preview": [
+        {
+          "CGPA": 8.8,
+          "CodingTestScore": 88,
+          "AptitudeTestScore": 85,
+          "SoftSkillsRating": 4.5,
+          "Internships": 2,
+          "Projects": 3,
+          "predicted_salary_lpa": 12.48,
+          "placement_probability": 0.975,
+          "predicted_placement": 1
+        },
+        {
+          "CGPA": 7.2,
+          "CodingTestScore": 65,
+          "AptitudeTestScore": 70,
+          "SoftSkillsRating": 3.5,
+          "Internships": 1,
+          "Projects": 1,
+          "predicted_salary_lpa": 8.44,
+          "placement_probability": 0.847,
+          "predicted_placement": 1
+        },
+        {
+          "CGPA": 6.1,
+          "CodingTestScore": 45,
+          "AptitudeTestScore": 55,
+          "SoftSkillsRating": 2.8,
+          "Internships": 0,
+          "Projects": 1,
+          "predicted_salary_lpa": 5.42,
+          "placement_probability": 0.557,
+          "predicted_placement": 1
+        },
+        {
+          "CGPA": 9.4,
+          "CodingTestScore": 95,
+          "AptitudeTestScore": 92,
+          "SoftSkillsRating": 4.8,
+          "Internships": 3,
+          "Projects": 4,
+          "predicted_salary_lpa": 14.27,
+          "placement_probability": 0.988,
+          "predicted_placement": 1
+        },
+        {
+          "CGPA": 7.9,
+          "CodingTestScore": 78,
+          "AptitudeTestScore": 80,
+          "SoftSkillsRating": 4.0,
+          "Internships": 2,
+          "Projects": 2,
+          "predicted_salary_lpa": 10.61,
+          "placement_probability": 0.935,
+          "predicted_placement": 1
+        },
+        {
+          "CGPA": 5.5,
+          "CodingTestScore": 38,
+          "AptitudeTestScore": 48,
+          "SoftSkillsRating": 2.5,
+          "Internships": 0,
+          "Projects": 0,
+          "predicted_salary_lpa": 4.28,
+          "placement_probability": 0.387,
+          "predicted_placement": 0
+        }
+      ]
+    }
+  },
+  "m2_classification": {
+    "target_binary": "PlacementStatus (0: Not Placed, 1: Placed)",
+    "target_multinomial": "SalaryTier (0: Low, 1: Medium, 2: High)",
+    "class_imbalance": {
+      "positive_cases": 3684,
+      "negative_cases": 1916,
+      "imbalance_ratio": "0.52:1"
+    },
+    "binary_models": {
+      "standard": {
+        "name": "Logistic Regression (Uniform)",
+        "accuracy": 0.9025,
+        "precision": 0.9128,
+        "recall": 0.9417,
+        "f1": 0.927,
+        "roc_auc": 0.9595,
+        "pr_auc": 0.9768,
+        "log_loss": 0.2406,
+        "confusion_matrix": [
+          [
+            340,
+            71
+          ],
+          [
+            46,
+            743
+          ]
+        ]
+      },
+      "balanced": {
+        "name": "Logistic Regression (Class-Weighted)",
+        "accuracy": 0.8833,
+        "precision": 0.9427,
+        "recall": 0.8758,
+        "f1": 0.908,
+        "roc_auc": 0.9592,
+        "pr_auc": 0.9771,
+        "log_loss": 0.2576,
+        "confusion_matrix": [
+          [
+            369,
+            42
+          ],
+          [
+            98,
+            691
+          ]
+        ]
+      }
+    },
+    "multinomial_model": {
+      "name": "Multinomial Logistic Regression (Softmax)",
+      "accuracy": 0.8633,
+      "f1_macro": 0.8514,
+      "f1_weighted": 0.8621,
+      "log_loss": 0.3788,
+      "classes": [
+        "Entry (< 4 LPA)",
+        "Medium (4 - 8 LPA)",
+        "High (> 8 LPA)"
+      ],
+      "confusion_matrix": [
+        [
+          437,
+          36,
+          15
+        ],
+        [
+          53,
+          224,
+          30
+        ],
+        [
+          3,
+          27,
+          375
+        ]
+      ]
+    },
+    "chart": "m2_classification_curves.png",
+    "fitted_pipelines": {
+      "binary_standard": "Pipeline(steps=[('scaler', StandardScaler()),\n                ('clf', LogisticRegression(max_iter=1000, random_state=42))])",
+      "binary_balanced": "Pipeline(steps=[('scaler', StandardScaler()),\n                ('clf',\n                 LogisticRegression(class_weight='balanced', max_iter=1000,\n                                    random_state=42))])",
+      "multinomial": "Pipeline(steps=[('scaler', StandardScaler()),\n                ('clf', LogisticRegression(max_iter=1000, random_state=42))])"
+    }
+  },
+  "m3_trees": {
+    "benchmarks": [
+      {
+        "key": "decision_tree",
+        "name": "Decision Tree (Pre-Pruned, Depth 5)",
+        "family": "Single Tree (CART)",
+        "training_time_ms": 4.49,
+        "mae": 1.5,
+        "rmse": 2.49,
+        "r2": 0.926,
+        "oob_score": null,
+        "parameters": {
+          "max_depth": 5,
+          "min_samples_split": 20,
+          "criterion": "squared_error"
+        }
+      },
+      {
+        "key": "random_forest",
+        "name": "Random Forest (50 Trees, OOB)",
+        "family": "Bagging Ensemble",
+        "training_time_ms": 198.68,
+        "mae": 1.51,
+        "rmse": 2.45,
+        "r2": 0.9282,
+        "oob_score": 0.9083,
+        "parameters": {
+          "n_estimators": 50,
+          "max_depth": 8,
+          "oob_score": true
+        }
+      },
+      {
+        "key": "adaboost",
+        "name": "AdaBoost Regressor (Linear Loss)",
+        "family": "Boosting (Adaptive Residuals)",
+        "training_time_ms": 97.21,
+        "mae": 2.13,
+        "rmse": 2.71,
+        "r2": 0.9125,
+        "oob_score": null,
+        "parameters": {
+          "n_estimators": 30,
+          "learning_rate": 0.1,
+          "loss": "linear"
+        }
+      },
+      {
+        "key": "gradient_boosting",
+        "name": "Gradient Boosting (Friedman MSE)",
+        "family": "Boosting (Gradient Descent Loss)",
+        "training_time_ms": 109.01,
+        "mae": 1.69,
+        "rmse": 2.43,
+        "r2": 0.9296,
+        "oob_score": null,
+        "parameters": {
+          "n_estimators": 40,
+          "learning_rate": 0.08,
+          "max_depth": 4
+        }
+      },
+      {
+        "key": "hist_gradient_boosting",
+        "name": "HistGradientBoosting (Histogram-Binning)",
+        "family": "Histogram-Based Gradient Boosting",
+        "training_time_ms": 600.96,
+        "mae": 1.74,
+        "rmse": 2.56,
+        "r2": 0.9215,
+        "oob_score": null,
+        "parameters": {
+          "max_iter": 100,
+          "learning_rate": 0.08
+        }
+      }
+    ],
+    "feature_importances": {
+      "mdi_random_forest": {
+        "CGPA": 0.8465,
+        "CodingTestScore": 0.0191,
+        "AptitudeTestScore": 0.0252,
+        "SoftSkillsRating": 0.0126,
+        "MockInterviewScore": 0.0795,
+        "Internships": 0.0054,
+        "Projects": 0.0118
+      },
+      "permutation_importance": {
+        "CGPA": 1.0622,
+        "CodingTestScore": 0.0291,
+        "AptitudeTestScore": 0.0232,
+        "SoftSkillsRating": 0.0259,
+        "MockInterviewScore": 0.2934,
+        "Internships": 0.009,
+        "Projects": 0.0133
+      }
+    },
+    "cost_complexity_pruning": {
+      "total_alphas_found": 37,
+      "sample_alphas": [
+        0.0,
+        0.01177,
+        0.05667,
+        0.12926,
+        0.38631,
+        56.86215
+      ],
+      "sample_impurities": [
+        4.8271,
+        4.8627,
+        5.1632,
+        5.8711,
+        7.6897,
+        78.9505
+      ]
+    },
+    "lightgbm_integration": {
+      "native_lightgbm_available": false,
+      "status_note": "Scikit-Learn HistGradientBoosting (Native Histogram Binning fallback)"
+    },
+    "chart": "m3_tree_benchmarks.png",
+    "trained_models": {
+      "decision_tree": "DecisionTreeRegressor(max_depth=5, min_samples_leaf=10, min_samples_split=20,\n                      random_state=42)",
+      "random_forest": "RandomForestRegressor(max_depth=8, min_samples_leaf=5, n_estimators=50,\n                      n_jobs=1, oob_score=True, random_state=42)",
+      "adaboost": "AdaBoostRegressor(learning_rate=0.1, n_estimators=30, random_state=42)",
+      "gradient_boosting": "GradientBoostingRegressor(learning_rate=0.08, max_depth=4, n_estimators=40,\n                          random_state=42)",
+      "hist_gradient_boosting": "HistGradientBoostingRegressor(learning_rate=0.08, random_state=42)"
+    }
+  },
+  "m4_unsupervised": {
+    "kmeans": {
+      "optimal_k": 3,
+      "inertia": 7978.1,
+      "minibatch_inertia": 10835.13,
+      "cluster_archetypes": [
+        {
+          "cluster_id": 2,
+          "archetype": "High-Performance Tech Placed",
+          "count": 1079,
+          "pct_of_students": 36.0,
+          "mean_cgpa": 8.62,
+          "mean_coding_score": 77.4,
+          "mean_salary_package": 17.0,
+          "mean_internships": 1.9
+        },
+        {
+          "cluster_id": 1,
+          "archetype": "Balanced Core Achiever",
+          "count": 1328,
+          "pct_of_students": 44.3,
+          "mean_cgpa": 7.04,
+          "mean_coding_score": 54.9,
+          "mean_salary_package": 7.78,
+          "mean_internships": 0.9
+        },
+        {
+          "cluster_id": 0,
+          "archetype": "Academic & Skill Risk (Needs Upskilling)",
+          "count": 593,
+          "pct_of_students": 19.8,
+          "mean_cgpa": 5.38,
+          "mean_coding_score": 28.3,
+          "mean_salary_package": 0.52,
+          "mean_internships": 0.3
+        }
+      ],
+      "elbow_analysis": {
+        "k_values": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "inertias": [
+          11331.99,
+          7978.1,
+          7403.69,
+          6955.06
+        ],
+        "silhouette_scores": [
+          0.383,
+          0.3574,
+          0.342,
+          0.2018
+        ],
+        "optimal_k_by_silhouette": 2
+      }
+    },
+    "pca": {
+      "explained_variance_ratio": [
+        0.6686,
+        0.084,
+        0.0683
+      ],
+      "total_variance_explained_pct": 82.1
+    },
+    "dbscan": {
+      "eps": 1.5,
+      "min_samples": 10,
+      "clusters_discovered": 1,
+      "noise_outliers": 28
+    },
+    "anomaly_detection": {
+      "algorithm": "Isolation Forest",
+      "contamination": 0.04,
+      "isolation_forest_anomalies": 120,
+      "pct_anomalous": 4.0
+    },
+    "chart": "m4_unsupervised_clusters.png"
+  },
+  "m5_evaluation": {
+    "kfold_cv": {
+      "k_folds": 5,
+      "target": "SalaryPackage",
+      "mean_r2": 0.7354,
+      "std_r2": 0.033,
+      "fold_r2_scores": [
+        0.7431,
+        0.686,
+        0.7599,
+        0.7108,
+        0.7771
+      ],
+      "mean_rmse": 4.573,
+      "fold_rmse_scores": [
+        4.573,
+        5.018,
+        4.356,
+        4.603,
+        4.315
+      ]
+    },
+    "stratified_cv": {
+      "k_folds": 5,
+      "target": "PlacementStatus",
+      "mean_accuracy": 0.8893,
+      "std_accuracy": 0.0219,
+      "mean_f1": 0.9163,
+      "fold_accuracies": [
+        0.9167,
+        0.8867,
+        0.8567,
+        0.91,
+        0.8767
+      ]
+    },
+    "nested_cv": {
+      "outer_folds": 3,
+      "inner_folds": 3,
+      "mean_nested_r2": 0.741,
+      "std_nested_r2": 0.0159,
+      "outer_fold_scores": [
+        0.7199,
+        0.758,
+        0.7452
+      ]
+    },
+    "probability_calibration": {
+      "uncalibrated": {
+        "brier_score": 0.08179
+      },
+      "platt_sigmoid": {
+        "brier_score": 0.08108
+      },
+      "isotonic_regression": {
+        "brier_score": 0.0817
+      }
+    },
+    "mcnemar_test": {
+      "b_cell_m1_better": 0,
+      "c_cell_m2_better": 0,
+      "statistic": 0.0,
+      "p_value": 1.0,
+      "statistically_significant": false,
+      "interpretation": "No statistically significant difference between the two classifiers (p >= 0.05)"
+    },
+    "bootstrap_ci_95": {
+      "mean_difference": 0.121,
+      "ci_95_lower": -0.7627,
+      "ci_95_upper": 0.9807,
+      "significant": false,
+      "interpretation": "95% CI includes 0: Difference between models is not statistically distinguishable."
+    },
+    "chart": "m5_model_evaluation.png"
+  },
+  "m6_engineering": {
+    "feature_drift_analysis": {
+      "ks_statistic": 0.0455,
+      "ks_p_value": 0.0,
+      "psi_score": 0.0191,
+      "drift_detected": true,
+      "severity": "NEGLIGIBLE",
+      "interpretation": "Significant drift detected (PSI=0.019, p=0.0000)"
+    },
+    "promotion_gate": {
+      "candidate_r2": 0.892,
+      "champion_r2": 0.885,
+      "candidate_rmse": 1.42,
+      "champion_rmse": 1.48,
+      "gate_passed": true,
+      "decision": "PROMOTE CANDIDATE TO PRODUCTION"
+    },
+    "latest_experiment_run": {
+      "run_id": "run_0002",
+      "timestamp": "2026-10-15 19:08:37 UTC",
+      "model_name": "Ridge_Placement_Salary_L2",
+      "hyperparameters": {
+        "alpha": 1.0,
+        "solver": "auto"
+      },
+      "metrics": {
+        "r2": 0.885,
+        "mae": 1.15,
+        "rmse": 1.48
+      },
+      "tags": [
+        "baseline",
+        "production"
+      ]
+    },
+    "production_telemetry": {
+      "total_requests_served": 1,
+      "active_model_key": "polynomial",
+      "last_request_timestamp": "2026-10-15 19:08:37 UTC",
+      "latency_metrics_ms": {
+        "p50_median": 2.1,
+        "p95_tail": 2.1,
+        "average": 2.1
+      },
+      "service_status": "HEALTHY",
+      "drift_alert_state": "NORMAL (No Drift Thresholds Exceeded)"
+    },
+    "registry_directory": "/Users/hardik/PythonProject1ML/outputs/models"
+  }
+}

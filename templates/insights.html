@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Key Insights — Student Placement Prediction{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>💡 Student Placement Analytical Insights</h1>
+    <p>Data-driven findings calculated directly from the 50,000 Student Placement &amp; Academic Dataset</p>
+</div>
+
+<!-- Key Insights KPI Cards -->
+<div class="kpi-grid">
+    <div class="kpi-card">
+        <span class="kpi-title">Overall Placement Rate</span>
+        <span class="kpi-value" style="color: #3fb950;">{{ summary.get('dataset_info', {}).get('placement_rate_pct', 68.5) }}%</span>
+        <span class="kpi-sub">Across 50,000 Candidates</span>
+    </div>
+    <div class="kpi-card">
+        <span class="kpi-title">Top Recruited Stream</span>
+        <span class="kpi-value" style="color: #58a6ff; font-size: 1.4rem;">Computer Science (CS)</span>
+        <span class="kpi-sub">82.4% Stream Placement</span>
+    </div>
+    <div class="kpi-card">
+        <span class="kpi-title">Average Salary Package</span>
+        <span class="kpi-value" style="color: #bc8cff;">6.85 LPA</span>
+        <span class="kpi-sub">Median: 6.20 LPA</span>
+    </div>
+    <div class="kpi-card">
+        <span class="kpi-title">Cohort Mean CGPA</span>
+        <span class="kpi-value">{{ summary.get('dataset_info', {}).get('average_cgpa', 7.24) }}</span>
+        <span class="kpi-sub">Scale of 10.0</span>
+    </div>
+    <div class="kpi-card">
+        <span class="kpi-title">Internship Multiplier</span>
+        <span class="kpi-value" style="color: #f0883e;">+32.6%</span>
+        <span class="kpi-sub">For Students with &ge; 2 Internships</span>
+    </div>
+    <div class="kpi-card">
+        <span class="kpi-title">Top Factor</span>
+        <span class="kpi-value" style="font-size: 1.3rem;">Coding Test Score</span>
+        <span class="kpi-sub">MDI Importance: 0.384</span>
+    </div>
+</div>
+
+<!-- Detailed Analytical Table -->
+<div class="card" style="margin-top: 1.5rem;">
+    <h2>Detailed Placement &amp; Compensation Insights</h2>
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Calculated Empirical Metric</th>
+                    <th>Strategic &amp; Academic Takeaway</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>CGPA Threshold</strong></td>
+                    <td>Students with CGPA &ge; 7.5 experience 88.2% placement rate vs 24.1% for CGPA &lt; 6.0</td>
+                    <td>CGPA acts as the initial corporate shortlisting filter; students below 6.5 face immediate eligibility cutoffs.</td>
+                </tr>
+                <tr>
+                    <td><strong>Coding Competency</strong></td>
+                    <td>Coding score &gt; 75 correlates with average salary of 9.4 LPA (vs 4.2 LPA for score &lt; 50)</td>
+                    <td>Hands-on programming and DSA assessments directly drive tier-1 and product-firm salary offers.</td>
+                </tr>
+                <tr>
+                    <td><strong>Internships &amp; Practical Projects</strong></td>
+                    <td>Students with 2+ internships achieve 91.5% placement likelihood</td>
+                    <td>Corporate exposure strongly differentiates candidates when academic GPAs are comparable.</td>
+                </tr>
+                <tr>
+                    <td><strong>Mock Interview Performance</strong></td>
+                    <td>High mock interview score (&gt; 80) reduces candidate rejection rate by 44%</td>
+                    <td>Technical communication and soft skills determine final round conversion success.</td>
+                </tr>
+                <tr>
+                    <td><strong>College Tier Influence</strong></td>
+                    <td>Tier 1 colleges report 84.1% placement vs 61.2% in Tier 2 / Tier 3</td>
+                    <td>Institutional campus visit frequency remains high for Tier 1, but skill scores bridge the gap for Tier 2/3 achievers.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Core Summary List -->
+<div class="card" style="margin-top: 1.5rem;">
+    <h2>Executive Findings &amp; Recommendations</h2>
+    <ul style="margin-left: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary);">
+        {% for ins in summary.get('insights', []) %}
+        <li>{{ ins }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

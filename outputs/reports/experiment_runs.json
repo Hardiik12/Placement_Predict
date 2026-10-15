@@ -1,0 +1,38 @@
+[
+  {
+    "run_id": "run_0001",
+    "timestamp": "2026-10-15 19:05:36 UTC",
+    "model_name": "Ridge_Placement_Salary_L2",
+    "hyperparameters": {
+      "alpha": 1.0,
+      "solver": "auto"
+    },
+    "metrics": {
+      "r2": 0.885,
+      "mae": 1.15,
+      "rmse": 1.48
+    },
+    "tags": [
+      "baseline",
+      "production"
+    ]
+  },
+  {
+    "run_id": "run_0002",
+    "timestamp": "2026-10-15 19:08:37 UTC",
+    "model_name": "Ridge_Placement_Salary_L2",
+    "hyperparameters": {
+      "alpha": 1.0,
+      "solver": "auto"
+    },
+    "metrics": {
+      "r2": 0.885,
+      "mae": 1.15,
+      "rmse": 1.48
+    },
+    "tags": [
+      "baseline",
+      "production"
+    ]
+  }
+]
