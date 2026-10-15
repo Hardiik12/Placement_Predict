@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Data Loading{% endblock %}
+
+{% block content %}
+<h1>Data Loading &amp; Cleaning</h1>
+
+{% if error %}
+    <div class="alert alert-error">
+        <strong>Could not load dataset:</strong> {{ error }}
+        <p>Place <code>placement_predict_50k_Dataset1.csv</code> inside the
+        <code>data/</code> folder and refresh.</p>
+    </div>
+{% else %}
+
+<div class="summary-grid">
+    <div class="summary-box">
+        <h3>Raw Dataset</h3>
+        <ul>
+            <li>Rows: <strong>{{ raw_summary.n_rows }}</strong></li>
+            <li>Columns: <strong>{{ raw_summary.n_cols }}</strong></li>
+            <li>Duplicate rows: <strong>{{ raw_summary.duplicate_rows }}</strong></li>
+            <li>Missing values (total): <strong>{{ raw_summary.missing_total }}</strong></li>
+        </ul>
+        {% if raw_summary.missing_counts %}
+        <h4>Missing values by column</h4>
+        <table class="mini-table">
+            <tr><th>Column</th><th>Missing</th></tr>
+            {% for col, count in raw_summary.missing_counts.items() %}
+            <tr><td>{{ col }}</td><td>{{ count }}</td></tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+
+    <div class="summary-box">
+        <h3>Cleaned Dataset</h3>
+        <ul>
+            <li>Rows: <strong>{{ cleaned_summary.n_rows }}</strong></li>
+            <li>Columns: <strong>{{ cleaned_summary.n_cols }}</strong></li>
+            <li>Duplicate rows: <strong>{{ cleaned_summary.duplicate_rows }}</strong></li>
+            <li>Missing values (total): <strong>{{ cleaned_summary.missing_total }}</strong></li>
+        </ul>
+        <p class="hint">Numeric nulls were median-imputed; duplicates and
+        whitespace were stripped. See <code>ml/data_loader.py</code>.</p>
+    </div>
+
+    <div class="summary-box">
+        <h3>Target Distribution</h3>
+        <table class="mini-table">
+            <tr><th>PlacementStatus</th><th>Count</th></tr>
+            {% for label, count in cleaned_summary.target_distribution.items() %}
+            <tr><td>{{ label }}</td><td>{{ count }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+<h2>Preview (first 10 cleaned rows)</h2>
+<div class="table-scroll">
+    <table class="data-table">
+        <thead>
+            <tr>
+                {% for col in preview_cols %}
+                <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in preview_rows %}
+            <tr>
+                {% for col in preview_cols %}
+                <td>{{ row[col] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endif %}
+{% endblock %}

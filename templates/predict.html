@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Predict Placement{% endblock %}
+
+{% block content %}
+<div class="prediction-container">
+    <h2>Student Placement Prediction</h2>
+    <p class="hint">Enter student details to predict placement status.</p>
+
+    {% if error %}
+        <div class="error-message">
+            <strong>Error:</strong> {{ error }}
+        </div>
+    {% endif %}
+
+    {% if result %}
+        <div class="result-box">
+            <h3>Prediction Result</h3>
+            <p>
+                Placement Status:
+                <strong>{{ result.status if result.status is defined else ('Placed' if result.prediction == '1' or result.prediction == 1 else 'Not Placed') }}</strong>
+            </p>
+            <p>
+                Model Confidence / Probability:
+                <strong>{{ result.probability if result.probability is defined else result.confidence }}%</strong>
+            </p>
+            {% if result.predicted_salary and result.predicted_salary > 0 %}
+                <p>
+                    Estimated Salary Package:
+                    <strong>₹ {{ result.predicted_salary }} LPA</strong>
+                </p>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('predict') }}" style="margin-top: 20px;">
+        {% if numeric_cols is defined and numeric_cols %}
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                {% for col in numeric_cols %}
+                <div class="form-group">
+                    <label>{{ col }}</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="{{ col }}"
+                        value="{{ values.get(col, '') if values else (form_data.get(col, '') if form_data else '') }}"
+                        class="form-input"
+                        required
+                    >
+                </div>
+                {% endfor %}
+
+                {% for col in categorical_cols %}
+                <div class="form-group">
+                    <label>{{ col }}</label>
+                    <select name="{{ col }}" class="form-input" required>
+                        <option value="">Select {{ col }}</option>
+                        {% for option in categories[col] %}
+                        <option
+                            value="{{ option }}"
+                            {% if values and values.get(col) == option|string %}
+                            selected
+                            {% elif form_data and form_data.get(col) == option|string %}
+                            selected
+                            {% endif %}
+                        >
+                            {{ option }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <!-- Default Form Fields -->
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="form-group">
+                    <label>CGPA</label>
+                    <input type="number" step="0.01" min="0" max="10" name="CGPA" value="{{ form_data.get('CGPA', values.get('CGPA', '7.5')) if (form_data or values) else '7.5' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Attendance %</label>
+                    <input type="number" step="0.1" min="0" max="100" name="AttendancePercent" value="{{ form_data.get('AttendancePercent', values.get('AttendancePercent', '85.0')) if (form_data or values) else '85.0' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Coding Test Score</label>
+                    <input type="number" step="0.1" min="0" max="100" name="CodingTestScore" value="{{ form_data.get('CodingTestScore', values.get('CodingTestScore', '78.0')) if (form_data or values) else '78.0' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Aptitude Test Score</label>
+                    <input type="number" step="0.1" min="0" max="100" name="AptitudeTestScore" value="{{ form_data.get('AptitudeTestScore', values.get('AptitudeTestScore', '75.0')) if (form_data or values) else '75.0' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Soft Skills Rating</label>
+                    <input type="number" step="0.1" min="1" max="5" name="SoftSkillsRating" value="{{ form_data.get('SoftSkillsRating', values.get('SoftSkillsRating', '4.0')) if (form_data or values) else '4.0' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Mock Interview Score</label>
+                    <input type="number" step="0.1" min="0" max="100" name="MockInterviewScore" value="{{ form_data.get('MockInterviewScore', values.get('MockInterviewScore', '70.0')) if (form_data or values) else '70.0' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Internships</label>
+                    <input type="number" min="0" max="10" name="Internships" value="{{ form_data.get('Internships', values.get('Internships', '1')) if (form_data or values) else '1' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Projects</label>
+                    <input type="number" min="0" max="20" name="Projects" value="{{ form_data.get('Projects', values.get('Projects', '2')) if (form_data or values) else '2' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Workshops</label>
+                    <input type="number" min="0" max="10" name="Workshops" value="{{ form_data.get('Workshops', values.get('Workshops', '2')) if (form_data or values) else '2' }}" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Stream</label>
+                    <select name="Stream" class="form-input">
+                        <option value="CS" {% if (form_data and form_data.get('Stream') == 'CS') or (values and values.get('Stream') == 'CS') %}selected{% endif %}>CS</option>
+                        <option value="IT" {% if (form_data and form_data.get('Stream') == 'IT') or (values and values.get('Stream') == 'IT') %}selected{% endif %}>IT</option>
+                        <option value="ECE" {% if (form_data and form_data.get('Stream') == 'ECE') or (values and values.get('Stream') == 'ECE') %}selected{% endif %}>ECE</option>
+                        <option value="EEE" {% if (form_data and form_data.get('Stream') == 'EEE') or (values and values.get('Stream') == 'EEE') %}selected{% endif %}>EEE</option>
+                        <option value="Mechanical" {% if (form_data and form_data.get('Stream') == 'Mechanical') or (values and values.get('Stream') == 'Mechanical') %}selected{% endif %}>Mechanical</option>
+                        <option value="Civil" {% if (form_data and form_data.get('Stream') == 'Civil') or (values and values.get('Stream') == 'Civil') %}selected{% endif %}>Civil</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>College Tier</label>
+                    <select name="CollegeTier" class="form-input">
+                        <option value="Tier 1" {% if (form_data and form_data.get('CollegeTier') == 'Tier 1') or (values and values.get('CollegeTier') == 'Tier 1') %}selected{% endif %}>Tier 1</option>
+                        <option value="Tier 2" {% if (form_data and form_data.get('CollegeTier') == 'Tier 2') or (values and values.get('CollegeTier') == 'Tier 2') %}selected{% endif %}>Tier 2</option>
+                        <option value="Tier 3" {% if (form_data and form_data.get('CollegeTier') == 'Tier 3') or (values and values.get('CollegeTier') == 'Tier 3') %}selected{% endif %}>Tier 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>History of Backlogs</label>
+                    <select name="HistoryOfBacklogs" class="form-input">
+                        <option value="No" {% if (form_data and form_data.get('HistoryOfBacklogs') == 'No') or (values and values.get('HistoryOfBacklogs') == 'No') %}selected{% endif %}>No</option>
+                        <option value="Yes" {% if (form_data and form_data.get('HistoryOfBacklogs') == 'Yes') or (values and values.get('HistoryOfBacklogs') == 'Yes') %}selected{% endif %}>Yes</option>
+                    </select>
+                </div>
+            </div>
+        {% endif %}
+
+        <div style="margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary">🎯 Predict Placement</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

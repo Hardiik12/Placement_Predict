@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Model Training{% endblock %}
+
+{% block content %}
+<h1>🤖 Model Training &amp; Evaluation</h1>
+<p class="hint">Train a machine learning pipeline (RandomForestClassifier with Scikit-Learn Pipeline) on the placement dataset.</p>
+
+{% if error %}
+    <div class="alert alert-error">
+        <strong>Error:</strong> {{ error }}
+    </div>
+{% endif %}
+
+<div class="summary-grid">
+    <div class="summary-box">
+        <h3>Model Status</h3>
+        {% if metrics %}
+            <p><span class="badge badge-success">✓ Model Trained &amp; Ready</span></p>
+            <p>Model artifact saved at <code>models/placement_model.joblib</code>.</p>
+        {% else %}
+            <p><span class="badge badge-warning">⚠ No Trained Model Found</span></p>
+            <p>Click below to train the model pipeline on 50,000 student records.</p>
+        {% endif %}
+
+        <form action="{{ url_for('train_model') }}" method="POST" style="margin-top: 1rem;">
+            <button type="submit" class="btn btn-primary">🚀 Retrain Model Pipeline</button>
+        </form>
+    </div>
+
+    {% if metrics %}
+    <div class="summary-box">
+        <h3>Performance Overview</h3>
+        <ul>
+            <li>Accuracy: <strong>{{ metrics.accuracy }}%</strong></li>
+            <li>Precision: <strong>{{ metrics.precision }}%</strong></li>
+            <li>Recall: <strong>{{ metrics.recall }}%</strong></li>
+            <li>F1 Score: <strong>{{ metrics.f1_score }}%</strong></li>
+            <li>ROC AUC: <strong>{{ metrics.roc_auc }}%</strong></li>
+            <li>Train Samples: <strong>{{ metrics.train_samples }}</strong></li>
+            <li>Test Samples: <strong>{{ metrics.test_samples }}</strong></li>
+        </ul>
+    </div>
+    {% endif %}
+</div>
+
+{% if metrics %}
+<h2>Evaluation Metrics Breakdown</h2>
+<div class="table-scroll">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Score</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Accuracy</td>
+                <td><strong>{{ metrics.accuracy }}%</strong></td>
+                <td>Overall percentage of correct predictions (Placed / Not Placed).</td>
+            </tr>
+            <tr>
+                <td>Precision</td>
+                <td><strong>{{ metrics.precision }}%</strong></td>
+                <td>Percentage of actual placements among predicted placed students.</td>
+            </tr>
+            <tr>
+                <td>Recall</td>
+                <td><strong>{{ metrics.recall }}%</strong></td>
+                <td>Percentage of placed students correctly identified by the model.</td>
+            </tr>
+            <tr>
+                <td>F1 Score</td>
+                <td><strong>{{ metrics.f1_score }}%</strong></td>
+                <td>Harmonic mean of precision and recall.</td>
+            </tr>
+            <tr>
+                <td>ROC AUC Score</td>
+                <td><strong>{{ metrics.roc_auc }}%</strong></td>
+                <td>Area under Receiver Operating Characteristic curve.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endif %}
+{% endblock %}

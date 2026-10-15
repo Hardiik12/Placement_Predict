@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Logistic Regression{% endblock %}
+
+{% block content %}
+<div class="summary-box">
+    <h2>🎯 Simple Logistic Regression (CGPA ➔ Placement Status)</h2>
+    {% if error %}
+        <div class="alert alert-error">{{ error }}</div>
+    {% elif result %}
+        <div class="stat-row">
+            <div class="stat-card">
+                <span class="label">Accuracy</span>
+                <span class="value">{{ result.accuracy }}%</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Intercept (&theta;<sub>0</sub>)</span>
+                <span class="value">{{ result.intercept }}</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Coefficient (&theta;<sub>1</sub>)</span>
+                <span class="value">{{ result.coefficient }}</span>
+            </div>
+        </div>
+
+        {% if result.confusion_matrix %}
+            <h3>Confusion Matrix</h3>
+            <div class="table-wrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Predicted Not Placed (0)</th>
+                            <th>Predicted Placed (1)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Actual Not Placed (0)</th>
+                            <td>{{ result.confusion_matrix[0][0] }}</td>
+                            <td>{{ result.confusion_matrix[0][1] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Actual Placed (1)</th>
+                            <td>{{ result.confusion_matrix[1][0] }}</td>
+                            <td>{{ result.confusion_matrix[1][1] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

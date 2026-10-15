@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Student Placement Prediction</h1>
+    <p>
+        A dashboard for exploring the student placement dataset and (later)
+        serving trained ML models that predict placement outcomes.
+    </p>
+</section>
+
+<section class="card-grid">
+    <a class="card" href="{{ url_for('data_loading') }}">
+        <h2>📥 Data Loading</h2>
+        <p>Load the raw dataset, clean it, and preview rows &amp; schema.</p>
+    </a>
+
+    <a class="card" href="{{ url_for('eda') }}">
+        <h2>📊 Exploratory Data Analysis</h2>
+        <p>Summary statistics, correlations, and visual charts.</p>
+    </a>
+
+    <a class="card" href="{{ url_for('feature_engg') }}">
+        <h2>⚙️ Feature Engineering</h2>
+        <p>MinMax scaling &amp; numeric feature normalization.</p>
+    </a>
+
+    <a class="card" href="{{ url_for('train_model') }}">
+        <h2>🤖 Model Training</h2>
+        <p>Train &amp; evaluate Random Forest classifier pipeline.</p>
+    </a>
+
+    <a class="card" href="{{ url_for('predict') }}">
+        <h2>🔮 Predict</h2>
+        <p>Enter a student profile and get a placement prediction.</p>
+    </a>
+</section>
+
+<section class="dataset-note">
+    <h3>Dataset</h3>
+    <p>
+        <code>placement_predict_50k_Dataset1.csv</code> &mdash; 50,000 student
+        records with academic (SGPA/CGPA), skill-test, and activity features,
+        plus the target column <code>PlacementStatus</code>.
+    </p>
+</section>
+{% endblock %}

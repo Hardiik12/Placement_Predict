@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Feature Engineering - Normalization{% endblock %}
+
+{% block content %}
+<h1>⚙️ Feature Engineering &amp; Normalization</h1>
+<p class="hint">Preview of MinMaxScaler normalized numerical features for the training dataset.</p>
+
+{% if error %}
+    <div class="alert alert-error">
+        <strong>Error:</strong> {{ error }}
+    </div>
+{% else %}
+
+<div class="card summary-box">
+    <h2>Numerical Features (MinMaxScaler Normalized Preview)</h2>
+    <div class="table-scroll" style="margin-top: 1rem;">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    {% for column in num_features %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in train_rows %}
+                    <tr>
+                        {% for element in row %}
+                            <td>{{ element }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>    
+        </table>
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}

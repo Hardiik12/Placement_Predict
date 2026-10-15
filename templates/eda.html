@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}EDA{% endblock %}
+
+{% block content %}
+<h1>Exploratory Data Analysis</h1>
+<p class="hint">Stub page &mdash; wired to <code>ml/eda.py</code>. Extend with
+more charts / stats as needed.</p>
+
+{% if error %}
+    <div class="alert alert-error">
+        <strong>Could not run EDA:</strong> {{ error }}
+    </div>
+{% else %}
+
+<div class="summary-grid">
+    <div class="summary-box">
+        <h3>Placement Rate</h3>
+        <p class="big-stat">{{ stats.placement_rate }}%</p>
+    </div>
+
+    <div class="summary-box">
+        <h3>Top Correlations with Placement</h3>
+        <table class="mini-table">
+            <tr><th>Feature</th><th>Correlation</th></tr>
+            {% for feature, corr in stats.correlation_with_target.items() %}
+            <tr><td>{{ feature }}</td><td>{{ corr }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+<h2>Charts</h2>
+<div class="chart-grid">
+    {% for chart in chart_files %}
+    <div class="chart-box">
+        <img src="{{ url_for('static', filename='charts/' ~ chart) }}" alt="{{ chart }}">
+    </div>
+    {% endfor %}
+</div>
+
+<h2>Numeric Feature Summary</h2>
+<div class="table-scroll">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Count</th>
+                <th>Mean</th>
+                <th>Std</th>
+                <th>Min</th>
+                <th>25%</th>
+                <th>50%</th>
+                <th>75%</th>
+                <th>Max</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for feature, row in stats.numeric_describe.items() %}
+            <tr>
+                <td>{{ feature }}</td>
+                <td>{{ row['count'] }}</td>
+                <td>{{ row['mean'] }}</td>
+                <td>{{ row['std'] }}</td>
+                <td>{{ row['min'] }}</td>
+                <td>{{ row['25%'] }}</td>
+                <td>{{ row['50%'] }}</td>
+                <td>{{ row['75%'] }}</td>
+                <td>{{ row['max'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endif %}
+{% endblock %}

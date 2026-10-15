@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Data Loading{% endblock %}
+
+{% block content %}
+<div class="summary-box">
+    <h2>📥 Data Loading & Overview</h2>
+    {% if error %}
+        <div class="alert alert-error">{{ error }}</div>
+    {% elif info %}
+        <div class="stat-row">
+            <div class="stat-card">
+                <span class="label">Rows</span>
+                <span class="value">{{ info.shape[0] }}</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Columns</span>
+                <span class="value">{{ info.shape[1] }}</span>
+            </div>
+        </div>
+
+        <h3>First 5 Rows</h3>
+        <div class="table-wrap">
+            {{ info.head | safe }}
+        </div>
+
+        <h3>Data Types</h3>
+        <div class="table-wrap">
+            {{ info.dtypes | safe }}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

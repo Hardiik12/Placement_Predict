@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Placement Prediction{% endblock %} - Student Placement Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-brand">🎓 Placement Predictor</div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('data_loading') }}">Data Loading</a></li>
+            <li><a href="{{ url_for('eda') }}">EDA</a></li>
+            <li><a href="{{ url_for('feature_engg') }}">Feature Engg</a></li>
+            <li><a href="{{ url_for('train_model') }}">Model Training</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+        </ul>
+    </header>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Student Placement Prediction Dashboard &bull; Built with Flask &amp; Scikit-Learn</p>
+    </footer>
+</body>
+</html>
